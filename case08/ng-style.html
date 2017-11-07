@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:200px;
+            height: 200px;
+            background-color: deepskyblue;
+        }
+    </style>
+    <script src="js/angular-1.5.8.min.js"></script>
+</head>
+<body ng-controller="myCon">
+<div ng-style="tempStyle"></div>
+<div ng-class="myClass"></div>
+</body>
+<script>
+    angular.module("myApp",[])
+        .controller("myCon",["$scope",function($s){
+            $s.tempStyle = {
+                width:"100px",
+                height:"100px",
+                backgroundColor:"#f00"
+            }
+            $s.myClass="box";
+        }])
+</script>
+</html>

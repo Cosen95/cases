@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+       *{
+       	padding: 0;
+       	margin: 0;
+       }
+       ul{
+       	list-style: none;
+       }
+       a{
+       	text-decoration: none;
+       }
+    /*top样式开始*/
+       .top{
+       	width: 100%;
+       	min-width: 1040px;
+       	height: 40px;
+      
+       	background-color: #333;
+       }
+       .top .container{
+       	width: 1040px;
+       	height: 100%;
+       	margin:0 auto;
+       }
+       .top-left{
+       	padding-top: 8px;
+       	float: left;
+       }
+       .top-right{
+       	float: right;
+       	padding-top: 8px;
+       }
+       .top-right li{
+       	float: left;
+       	margin-left: 10px;
+
+       }
+       .top-right li a{
+       	color:#6a6a6a;
+       }
+    /*top样式结束*/
+    /*banner样式开始*/
+       .banner{
+        width: 100%;
+        height: 722px;
+        min-width: 1040px;
+        position: relative;
+      }
+       @font-face {font-family: "iconfont";
+        src: url(fonts/iconfont.eot); /* IE9*/
+        src: url(fonts/iconfont.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(fonts/iconfont.woff) format('woff'), /* chrome、firefox */
+       url(fonts/iconfont.ttf) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+       url(fonts/iconfont.svg#iconfont) format('svg'); /* iOS 4.1- */
+      }
+       .iconfont{
+      font-family:"iconfont" ;
+      font-size:16px;
+      font-style:normal;
+     -webkit-font-smoothing: antialiased;
+     -webkit-text-stroke-width: 0.2px;
+     -moz-osx-font-smoothing: grayscale;
+      }
+       .banner img.back{
+    	left: 367px;
+    	top: 254px;
+    	position: absolute;
+      }
+       .banner video{
+    	width: 100%;
+     }
+       .banner .scro-left{
+       	position: absolute;
+       	left: 0;
+       	top: 572px;
+       	width: 184px;
+       	height: 56px;
+       	border-radius: 30px;
+       	background-color: #fff;
+       	transition:all 1s linear;
+       	opacity: 0;
+       }
+       .banner .scro-left span.one{
+       	display: block;
+       	width: 44px;
+       	height: 44px;
+       	border-radius: 50%;
+       	margin-left: 10px;
+       	margin-top: 6px;
+       	border:1px solid #87bf90;
+        background-color: #fff;
+       }
+       .banner .scro-left span.one:hover{
+        box-shadow: 0 0 0 22px #82ba8b inset;
+       }
+       .banner .scro-left span.one i{
+       	display: block;
+       	margin-left: 12px;
+       	margin-top: 10px;
+       }
+       .banner .scro-left span.two{
+        color:#666;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+       }
+
+       .banner:hover .scro-left{
+       	transform:translateX(444px);
+       	opacity: 1;
+       }
+       .banner .scro-right{
+       	position: absolute;
+       	right: 0;
+       	top: 572px;
+       	width: 184px;
+       	height: 56px;
+       	border-radius: 30px;
+       	background-color: #fff;
+       	transition:all 1s linear;
+       	opacity: 0;
+       }
+       .banner .scro-right span.one{
+       	display: block;
+       	width: 44px;
+       	height: 44px;
+       	border-radius: 50%;
+       	margin-left: 10px;
+       	margin-top: 6px;
+       	border:1px solid #87bf90;
+       }
+       .banner .scro-right span.one:hover{
+        box-shadow: 0 0 0 22px #82ba8b inset;
+       }
+       .banner .scro-right span.one i{
+       	display: block;
+       	margin-left: 12px;
+       	margin-top: 10px;
+       }
+       .banner .scro-right span.two{
+        color:#666;
+        position: absolute;
+        left: 80px;
+        top: 20px;
+       }
+       .banner:hover .scro-right{
+       	transform:translateX(-444px);
+       	opacity: 1;
+       }
+       .banner .txt{
+        position: absolute;
+        left: 352px;
+        top: 524px;
+        color:#5cad9a;
+        width: 660px;
+        height: 24px;
+       }
+       .banner .content{
+    	position: absolute;
+    	left: 0px;
+    	top: 0px;
+    	background: rgba(0,0,0,0.2);
+    	width: 100%;
+    	height: 92px;
+
+     }
+      .banner .content .container{
+    	width: 1040px;
+    	height: 100%;
+       	margin:0 auto;
+       	position: absolute;
+     }
+     .banner .container .container-left{
+    	width: 250px;
+    	height: 92px;
+    	line-height: 92px;
+    	padding-right: 30px;
+    	text-align: center;
+    	position: absolute;
+    	left: 97px;
+    	
+     }
+     .banner .content .container-left span{
+        color:#fff;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bolder;
+     }
+     .banner .content .container-left .hover{
+    	width: 382px;
+    	height: 630px;
+    	position: absolute;
+    	left:10px;
+    	top: 92px;
+    	background: rgba(0,0,0,0.2);
+    	display: none;
+     }
+     .banner .content .container-left:hover .hover{
+    	display: block;
+     }
+     .banner .hover img.one{
+    	position: absolute;
+    	left: 30px;
+    	top: 0;
+     }
+     .banner .hover img.two{
+    	position: absolute;
+    	left: 20px;
+    	top: 500px;
+     }
+     .banner .hover .list1{
+        width: 130px;
+        height: 456px;
+       
+        position: absolute;
+        left: 65px;
+        top:32px;
+        text-align: left;
+
+     }
+     .banner .hover .list2{
+        width: 150px;
+        height: 290px;
+       
+        position: absolute;
+        left: 215px;
+        top: 32px;
+        text-align: left;
+
+     }
+     .banner .hover li{
+    	width: 100px;
+    	height: 25px;
+     }
+     .banner .hover li a{
+    	color:#fff;
+     }
+     .banner .hover li.one{
+    	font-size: 20px;
+    	font-weight: bolder;
+     }
+     .banner .container .container-center{
+    	width: 320px;
+    	height: 92px;
+    	line-height: 92px;
+    
+    	position: absolute;
+    	left: 500px;
+     }
+     .banner .container .container-center input{
+    	color:#fff;
+    	width: 270px;
+    	height: 32px;
+    	border-radius: 30px;
+    	outline: none;
+        border:2px solid #fff;
+    	background:url(images4/search.png) no-repeat;
+    	padding-left: 20px;
+    	
+     }
+     .banner .container .container-right{
+    	width: 240px;
+    	height: 92px;
+    	
+    	
+    	position: absolute;
+    	left: 920px;
+    	
+     }
+     .banner .container .container-right li{
+     	float: left;
+     }
+      .banner .container .container-right li{
+      	color:#fcfcfc;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border:1px solid #fcfcfc;
+        text-align: center;
+        line-height: 34px;
+        margin-left: 22px;
+        margin-top: 20px;
+      }
+      .banner .container .container-right li:hover{
+       box-shadow: 0 0 0 17px #fff inset;
+       color:#ccc;
+      }
+    /*banner样式结束*/
+/*new样式开始*/
+    .new{
+    	width: 100%;
+    	min-width: 1040px;
+    	height: 612px;
+    	background-color: #fff;
+    }
+    .new .container{
+        width: 1040px;
+        height: 612px;
+        margin:0 auto;
+        position: relative;
+    }
+    .new img.one{
+    	position: absolute;
+    	left: 362px;
+    	top: 72px;
+    }
+    .new .button{
+    	width: 360px;
+    	height: 96px;
+    	border-radius: 30px;
+    	background-color: #f7f7f7;
+    	position: absolute;
+    	left: 342px;
+    	top: 72px;
+    }
+    .new .txt{
+    	position: absolute;
+    	left: 350px;
+    	top: 170px;
+    	width: 356px;
+    	height: 40px;
+    	color:#e2598d;
+    }
+    .new .sub1{
+    	 width: 269px;
+    	 height: 252px;
+    	 border:1px solid #ccc;
+    	 position: absolute;
+    	 left:30px;
+    	 top: 268px;
+    	 overflow: hidden;
+    }
+    .new .sub2{
+    	 width: 269px;
+    	 height: 252px;
+    	 border:1px solid #ccc;
+    	 position: absolute;
+    	 left:380px;
+    	 top: 268px;
+    	 overflow: hidden;
+    }
+    .new .sub3{
+    	 width: 269px;
+    	 height: 252px;
+    	 border:1px solid #ccc;
+    	 position: absolute;
+    	 left:730px;
+    	 top: 268px;
+    	 overflow: hidden;
+    }
+    .new .sub1 .sub1-top{
+    	 width: 269px;
+    	 height: 252px;
+    	 position: absolute;
+    	 left: 0;
+    	 top: -252px;
+         text-align: center;
+    
+    	 color:#fff;
+    	 background-color: rgba(122,122,122,0.6);
+    	
+    	 transition:all 0.5s ease-in;
+    }
+    .new .sub1:hover .sub1-top{
+    	transform:translateY(252px);
+    }
+    .new .sub2 .sub2-top{
+    	 width: 269px;
+    	 height: 252px;
+    	 text-align: center;
+    	 color:#fff;
+    	 position: absolute;
+    	 left: 0;
+    	 top: -252px;
+    	 background-color: rgba(122,122,122,0.6);
+    	 
+    	 transition:all 0.5s ease-in;
+    }
+    .new .sub2:hover .sub2-top{
+    	transform:translateY(252px);
+    }
+    .new .sub3 .sub3-top{
+    	 width: 269px;
+    	 height: 252px;
+    	 position: absolute;
+    	 text-align: center;
+    	 color:#fff;
+    	 left: 0px;
+    	 top: -252px;
+    	 background-color: rgba(122,122,122,0.6);
+    	 
+    	 transition:all 0.5s ease-in;
+    }
+    .new .sub3:hover .sub3-top{
+    	transform:translateY(252px);
+    }
+   /*new样式结束*/
+    /*look样式开始*/
+    .look{
+    	width: 100%;
+    	height: 310px;
+    	min-width: 1040px;
+    	background-color: #82ba8b;
+    }
+    .look .container{
+    	width: 1040px;
+    	height: 310px;
+    	margin: 0 auto;
+    	position: relative;
+    }
+    .look .container .button{
+    	position: absolute;
+    	left: 229px;
+    	top: 27px;
+    	width: 556px;
+    	height: 98px;
+    	border-radius: 30px;
+    	background-color: #f7f7f7;
+    }
+    .look img.three{
+    	position: absolute;
+    	left:265px;
+    	top: 30px;
+    }
+    .look .txt{
+    	position: absolute;
+    	color:#f1f7f3;
+    	left: 400px;
+    	top: 145px;
+    	width: 323px;
+    	height: 20px;
+    }
+    .look .sub1{
+    	position: absolute;
+    	left: 10px;
+    	top: 200px;
+    	width: 292px;
+    	height: 250px;
+    	border:1px solid #ccc;
+        perspective:230px;
+        z-index: 9;
+    }
+    .look .sub1 img.one{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(0deg);
+    }
+    .look .sub1 img.two{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(-180deg);
+    }
+     .look .sub1:hover img.two{
+        transform:rotateX(0deg);
+     }
+     .look .sub1:hover img.one{
+        transform:rotateX(180deg);
+     }
+     .look .sub2{
+    	position: absolute;
+    	left: 362px;
+    	top: 200px;
+    	width: 292px;
+    	height: 250px;
+    	border:1px solid #ccc;
+        perspective:230px;
+        z-index: 9;
+    }
+   
+    
+    
+    .look .sub2 img.one{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(0deg);
+    }
+    .look .sub2 img.two{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(-180deg);
+    }
+     .look .sub2:hover img.two{
+        transform:rotateX(0deg);
+     }
+     .look .sub2:hover img.one{
+        transform:rotateX(180deg);
+     }
+    
+    
+    .look .sub3{
+    	position: absolute;
+    	left: 716px;
+    	top: 200px;
+    	width: 292px;
+    	height: 250px;
+    	border:1px solid #ccc;
+        perspective:230px;
+        z-index: 9;
+    }
+    .look .sub3 img.one{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(0deg);
+    }
+    .look .sub3 img.two{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	backface-visibility:hidden;
+    	transition:all 0.5s linear;
+    	transform:rotateX(-180deg);
+    }
+     .look .sub3:hover img.two{
+        transform:rotateX(0deg);
+     }
+     .look .sub3:hover img.one{
+        transform:rotateX(180deg);
+     }
+    /*look样式结束*/
+    /*library样式开始*/
+     .library{
+     	width: 100%;
+     	height: 886px;
+     	background-color: #fff;
+     	min-width: 1040px
+     }
+     .library .container{
+     	width: 1040px;
+     	height: 886px;
+     	margin:0 auto;
+     	position: relative;
+     }
+     .library .container .button{
+       position: absolute;
+       left: 262px;
+       top: 226px;
+       width: 492px;
+       height: 89px;
+       border-radius: 30px;
+       background-color: #f7f7f7;
+     }
+     .library .container img.cp{
+     	position: absolute;
+     	left: 289px;
+     	top: 224px;
+     }
+     .library .container .txt{
+     	position: absolute;
+     	left: 342px;
+     	top: 330px;
+     	width: 350px;
+     	height: 32px;
+     	color:#e1588c;
+     }
+     .library .container .circle1{
+     	position: absolute;
+     	left:60px;
+     	top: 438px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle1 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle1 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle1:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle1:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle2{
+     	position: absolute;
+     	left:300px;
+     	top: 438px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle2 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle2 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle2:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle2:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle3{
+     	position: absolute;
+     	left:540px;
+     	top: 438px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle3 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle3 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle3:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle3:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle4{
+     	position: absolute;
+     	left:780px;
+     	top: 438px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle4 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle4 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle4:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle4:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle5{
+     	position: absolute;
+     	left:60px;
+     	top: 668px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle5 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle5 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle5:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle5:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle6{
+     	position: absolute;
+     	left:300px;
+     	top: 668px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle6 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle6 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle6:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle6:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle7{
+     	position: absolute;
+     	left:540px;
+     	top: 668px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle7 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle7 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle7:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle7:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     .library .container .circle8{
+     	position: absolute;
+     	left:780px;
+     	top: 668px;
+     	width: 200px;
+     	height: 200px;
+     	border-radius: 50%;
+     	border:2px solid #ccc;
+     }
+     .library .container .circle8 img.one{
+        position: absolute;
+        left: 9px;
+        top: 66px;
+        transition:all 1s linear;
+     }
+     .library .container .circle8 img.two{
+        position: absolute;
+        left: -5px;
+        top: -4px;
+        opacity: 0;
+        transition:all 1s ease-out;
+
+     }
+     .library .container .circle8:hover img.one{
+        transform:scale(0);
+     }
+     .library .container .circle8:hover img.two{
+        transform:scale(0.8);
+        opacity: 1;
+     }
+     /*library样式结束*/
+     .login{
+	   width: 100%;
+       min-width: 1050px;
+	   height: 400px;
+	   background-color: #545861;
+    }
+    .login .container{
+	  width: 1050px;
+	  height: 400px;
+	  margin: 0  auto;
+	
+    }
+    .login .header{
+	  width: 100%;
+	  height: 88px;
+	  margin:0 auto;
+	  border-bottom: 2px solid #FFFFFF;
+    }
+    .login .header img{
+	  margin-left: 407px;
+    }
+    .login .con{
+	 margin-top: 30px;
+   }
+    .login .con .left{
+	 width: 240px;
+	 height:250px;
+	 float: left;
+	
+     margin-left: 60px;
+     color: #fff;
+    /*font-family: 妤蜂綋;*/
+     font-size: 14px;
+   }
+   .login .con .left .leftcon,.login .con .middle .middlecon 
+   ,.login .con .right .rightcon{
+	 padding: 40px;
+   }
+   .login .con .left img.one{
+    padding-left: 7px;
+   }
+   .login .con input{
+	height: 20px;
+	width: 190px;
+	border-radius: 5px;
+	margin: 10px;
+   }
+  .login .con .middle{
+	width: 240px;
+	height:250px;
+	float: left;
+	
+	margin-left: 30px; 
+	 color: #fff;
+    
+    font-size: 14px;
+  }
+  .login .con .right{
+	width: 400px;
+	height:250px;
+	float: left;
+	margin-left: 30px; 
+	
+	color: #fff;
+	font-size: 14px;
+ }
+  .login .con textarea{
+	border-radius: 5px;
+	margin: 10px;
+ }
+
+
+
+
+
+.footer{
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+	border-top:2px solid #fff;
+}
+.footercon{
+	width: 220px;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+}
+.footercon a{
+	text-decoration: none;
+	color: #fff;
+
+}
+	</style>
+
+</head>
+<body>
+    <audio src="audio/home.ogg" autoplay loop></audio>
+	<div class="top">
+	   <div class="container">
+		<div class="top-left">
+			<img src="images4/logo.png">
+		</div>
+		<div class="top-right">
+			<ul>
+				<li><a href="#">登录</a></li>
+				<li><a href="#">注册</a></li>
+			</ul>
+		</div>
+	   </div>
+	</div>
+	<div class="banner">
+		 <video src="video/home_loop_720p.mp4" autoplay loop></video>
+		 <img src="images4/wenzi.png" class="back">
+         <div class="txt">Select the right resolution for your PC and dive in!(请为你的电脑选择正确的分辨率)</div>
+		 <div class="scro-left"><span class="one"><i class="iconfont">&#xe662;</span></a><span class="two">STANDARD标准</span></div>
+		 <div class="scro-right"><span class="one"><i class="iconfont">&#xe662;</i></span><span class="two">HD高清</span></div>
+	     <div class="content">
+	     	<div class="container">
+	     	   <div class="container-left">
+	     	     <div class="list1">
+	     		<img src="images4/sanxian.png">&nbsp;<span>选项</span>&nbsp;<img src="images4/sanjiao.png">
+	     		 </div>
+	     		 <div class="hover">
+	     		 	<img src="images4/liebiao.png" class="one">
+	     		 	  <div class="list1">
+                        <ul>
+                        	<li class="one"><a href="#">护肤</a></li>
+                        	<li class="two"><a href="#">>洁面</a></li>
+                        	<li class="two"><a href="#">>爽肤水</a></li>
+                        	<li class="two"><a href="#">>精华</a></li>
+                        	<li class="two"><a href="#">>乳液</a></li>
+                        	<li class="one"><a href="#">彩妆</a></li>
+                        	<li class="two"><a href="#">>BB霜</a></li>
+                        	<li class="two"><a href="#">>卸妆</a></li>
+                        	<li class="two"><a href="#">>粉底液</a></li>
+                        	<li class="one"><a href="#">香氛</a></li>
+                        	<li class="two"><a href="#">>女士香水</a></li>
+                        	<li class="two"><a href="#">>男士香水</a></li>
+                        	<li class="two"><a href="#">>中性香水</a></li>
+                        </ul>
+                      </div>
+                      <div class="list2">
+                      	 <ul>
+                      	 	<li class="one"><a href="#">男士专区</a></li>
+                      	 	<li class="two"><a href="#">>爽肤水</a></li>
+                      	 	<li class="two"><a href="#">>洁面</a></li>
+                      	 	<li class="two"><a href="#">>面霜</a></li>
+                      	 	<li class="two"><a href="#">>精华</a></li>
+                      	 	<li class="one"><a href="#">热门搜索</a></li>
+                      	 	<li class="two"><a href="#">>洗面奶</a></li>
+                      	 	<li class="two"><a href="#">>去黑头</a></li>
+                      	 	<li class="two"><a href="#">>隔离</a></li>
+                      	 	<li class="two"><a href="#">>面膜</a></li>
+                      	 </ul>
+                      </div>
+	     		 	<img src="images4/tu1.jpg" class="two">
+	     		 </div>
+	     	   </div>
+	     	   <div class="container-center">
+	     	   	  <input type="text" value="请输入商品名称、品牌或编号">
+	     	   </div>
+	     	   <div class="container-right">
+	     	     <ul>
+                  <li><i class="iconfont">&#xe608;</i> </li>
+                   <li><i class="iconfont">&#xe65e;</i></li>
+                   <li><i class="iconfont">&#xf012a;</i></li>  
+                  <li> <i class="iconfont">&#xe68e;</i></li> 
+                 </ul> 
+               </div>
+	     	</div>
+	     </div>
+	</div>
+	<div class="new">
+		<div class="container">
+		     <div class="button"></div>
+			<img src="images4/new.jpg" class="one">
+			<div class="txt">
+				<span>补水保湿 提亮肤色 低敏配方 收缩毛孔 滋养容颜</span>
+			</div>
+			 <div class="sub1"><img src="images4/pic1.jpg">
+                 <div class="sub1-top">
+                 	<br/><br/><br/><br/><h3>fresh skin薏仁水</h3><br/>
+                  <h5>化妆水/爽肤水单品</h5><br/>
+                 <img src="images4/jiantou.png"><br/>
+                   <a href="#"><img src="images4/anniu.png"></a>
+                 </div>
+			 </div>
+             <div class="sub2"><img src="images4/pic2.jpg">
+                 <div class="sub2-top">
+                 	<br/><br/><br/><br/><h3>蜂蜜原液天然滋养</h3><br/>
+                  <h5>美白护肤套装</h5><br/>
+                   <img src="images4/jiantou.png"><br/>
+                  <a href="#"><img src="images4/anniu.png"></a>
+                 </div>
+             </div>
+             <div class="sub3"><img src="images4/pic3.jpg">
+                 <div class="sub3-top">
+                 	<br/><br/><br/><br/><h3>纯情诱惑一抹惊艳</h3><br/>
+                  <h5>告别暗淡唇</h5><br/>
+                  <img src="images4/jiantou.png"><br/>
+                 <a href="#"><img src="images4/anniu.png"></a>
+                 </div>
+             </div>
+		</div>
+	</div>
+	<div class="look">
+		<div class="container">
+			<div class="button"></div>
+			<img src="images4/shizhuang.jpg" class="three">
+			<div class="txt">
+				<span>美化容貌 增添自信 突出个性</span>
+			</div>
+			<div class="sub1">
+				<img src="images4/try1.jpg" class="one">
+				<img src="images4/try4.jpg" class="two">
+			</div>
+
+			<div class="sub2">
+				<img src="images4/try2.jpg" class="one">
+				<img src="images4/try5.jpg" class="two">
+			</div>
+
+			<div class="sub3">
+				<img src="images4/try3.jpg" class="one">
+				<img src="images4/try6.jpg" class="two">
+			</div>
+		</div>
+	</div>
+	<div class="library">
+		<div class="container">
+			<div class="button"></div>
+			<img src="images4/cp.jpg" class="cp">
+			<div class="txt"><span>国内外知名专家、权威科研机构、专业评测检验</span></div>
+			<div class="circle1">
+               
+               <img src="images4/th1.png" class="two">
+               <img src="images4/cp1.jpg" class="one">         
+            </div>
+			<div class="circle2">
+               <img src="images4/th2.png" class="two">
+               <img src="images4/cp2.jpg" class="one">  
+            </div>
+			<div class="circle3">
+               <img src="images4/th3.png" class="two">
+               <img src="images4/cp3.jpg" class="one">  
+            </div>
+			<div class="circle4">
+               <img src="images4/th4.png" class="two">
+               <img src="images4/cp4.jpg" class="one">           
+            </div>
+			<div class="circle5">
+               <img src="images4/th5.png" class="two">
+               <img src="images4/cp5.jpg" class="one">           
+            </div>
+			<div class="circle6">
+               <img src="images4/th6.png" class="two">
+               <img src="images4/cp6.jpg" class="one">           
+            </div>
+			<div class="circle7">
+               <img src="images4/th7.png" class="two">
+               <img src="images4/cp7.jpg" class="one">           
+            </div>
+			<div class="circle8">
+               <img src="images4/th8.png" class="two">
+               <img src="images4/cp8.jpg" class="one">           
+            </div>
+		</div>
+	</div>
+	<div class="login">
+		<div class="container">
+			<div class="header">
+				<img src="images4/logo1.jpg" alt="">
+			</div>
+			<div class="con">
+				<form action="">
+					<div class="left">
+						<div class="leftcon">
+							<label for="name">姓名：</label><br/>
+							<input type="text" id="name"><br/>
+							<label for="tel">电话：</label><br>
+							<input type="tel" pattern="^\d{11}$" id="tel"><br/><br/>
+                           <img src="images4/but.jpg" class="one">
+						</div>
+					</div>
+					<div class="middle">
+						<div class="middlecon">
+							<label for="">邮箱：</label>
+							<input type="email" name="email" />
+							<label for="pwd">密码：</label>
+							<input type="password">
+						</div>
+					</div>
+					<div class="right">
+					    <div class="rightcon">
+							<label>留言：</label><br>
+					            <textarea name="text" id="" cols="40" rows="10"></textarea>
+				        </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footercon">
+			<a href="#">fresh skin 美肤科技有限公司</a>
+		</div>
+	</div>
+
+</body>
+</html>

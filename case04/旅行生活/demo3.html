@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" href="css/media-100.css">
+	<style>
+        *{
+       	margin: 0;
+       	padding: 0;
+       }
+       ul{
+       	list-style: none;
+
+       }
+       a{
+       	text-decoration: none;
+       }
+       .header{
+       	width: 100%;
+       	height: 0.592rem;
+       	background-color: #f05b1a;
+       }
+       .header .container{
+       	width: 5.56rem;
+       	height: 0.592rem;
+       	margin:0 auto;
+       	display: flex;
+       	justify-content:space-between;
+       	align-items:center;
+       }
+       .banner{
+       	width: 100%;
+       	height: 2rem;
+       	background-color: #fff;
+       }
+       .banner .container{
+       	width: 100%;
+       	height: 2rem;
+       	font-size: 0;
+       	margin:0 auto;
+       	text-align: center;
+        
+       }
+       .banner .container .banner-top{
+       	width: 100%;
+       	height: 1.752rem;
+        overflow: hidden;
+       }
+       .banner .container img{
+       	width: 100%;
+       	margin-top: -20px;
+
+       }
+       .banner .container span{
+       	width: 0.848rem;
+       	height: 0.288rem;
+       	color: #b3b3b3;
+       	font-size: 0.128rem;
+       }
+       .list{
+       	width: 100%;
+       	height: 0.848rem;
+       	background-color: #fff;
+       	border-bottom: 0.008rem solid #d3d3d3;
+       }
+       .list .container{
+       	width: 5.56rem;
+       	height: 0.848rem;
+       	font-size: 0;
+            margin:0 auto;
+
+       
+       }
+       .list .container ul{
+            width: 5.56rem;
+            height: 0.848rem;
+            box-sizing:border-box;
+            font-size:0;
+       }
+       .list .container ul li{
+            box-sizing:border-box;
+            float: left;
+            width: 25%;
+            height: 0.848rem;
+            padding-top: 0.16rem;
+            text-align: center;
+       }
+       .list .container ul li:nth-child(1){
+            border-right: 0.008rem solid #999;
+       }
+       .list .container ul li:nth-child(2){
+            border-right: 0.008rem solid #999;
+       }
+       .list .container ul li:nth-child(3){
+            border-right: 0.008rem solid #999;
+       }
+       .list .container ul li img{
+            width: 0.4rem;
+       }
+       .list .container ul span{
+            color: #999;
+            font-size:0.16rem;
+       }
+
+       
+       
+       .tu{
+       	width: 100%;
+       	height: 1.984rem;
+       	background-image: url(images3/bgd.png);
+       	background-repeat: no-repeat;
+       	background-size: cover;
+       }
+       .tu .container{
+       	width: 5.56rem;
+       	height: 1.984rem;
+       	margin:0 auto;
+       	position: relative;
+       }
+
+       .tu .container .tu-left1{
+            width: 2.4rem;
+            height: 0.34rem;
+            font-size: 0;
+            margin-top: 0.16rem;
+        
+
+       }
+       .tu .container .tu-left1 img.one{
+            width: 0.24rem;
+            height: 0.32rem;
+            margin-right: 0.08rem;
+       }
+       .tu .container .tu-left1 img.two{
+            width: 0.88rem;
+            height: 0.32rem;
+            
+       }
+       .tu .container .tu-left2{
+            width: 2.8rem;
+            height: 0.9rem;
+            font-size: 0;
+            margin-left: 0.24rem;
+            margin-top: 0.08rem;
+       }
+       .tu .container .tu-left2 span{
+            width: 2.8rem;
+            height: 0.16rem;
+            color: #737373;
+            font-size: 0.192rem;
+       }
+       .tu .container .tu-left3{
+            width: 3.2rem;
+            height: 0.384rem;
+            font-size: 0;
+            margin-bottom: 0.2rem;
+       }
+       .tu .container .tu-left3 img.one{
+            width: 0.56rem;
+            margin-right: 0.16rem;
+       }
+       .tu .container .tu-left3 img.two{
+            width: 0.28rem;
+            margin-right: 0.16rem;
+       }
+       .tu .container .tu-left4{
+            width: 0.6rem;
+            height: 0.6rem;
+            position: absolute;
+            right: 0.08rem;
+            top: 0.7rem;
+       }  
+      .tu .container .tu-left4 img{
+            width: 0.6rem;
+      }
+       .talk{
+       	width: 100%;
+       	height: 4.064rem;
+       	background-color: #fff;
+       }
+       .talk .container{
+       	width: 5.56rem;
+       	height: 4.064rem;
+       	margin: 0 auto;
+       	font-size: 0;
+       }
+       .talk .container span.one{
+       	width: 5rem;
+       	height: 0.56rem;
+       	font-size: 0.2rem;
+       	font-weight: bolder;
+       	color: #646464;
+        float: left;
+       }
+       .talk .container table{
+       	width: 5.56rem;
+       	height: 3.568rem;
+       }
+       .talk .container table span{
+       	font-size: 0.128rem;
+       	color: #646464;
+       }
+       .talk .container table td:nth-child(1){
+       	width: 0.368rem;
+        height: 0.48rem;
+       }
+       .talk .container table td:nth-child(2){
+       	width: 4.404rem;
+       	height: 0.48rem;
+       }
+       .talk .container table td:nth-child(3){
+       	width: 0.588rem;
+       	height: 0.48rem;
+
+       }
+       .footer{
+       	position: fixed;
+       	left: 0;
+       	bottom:0;
+       	width: 100%;
+       	height: 0.784rem;
+       	background-color: #fff;
+       	border-top: 0.024rem solid #e4e2e1;
+       }
+       .footer .container{
+       	width: 5.52rem;
+       	height: 0.784rem;
+       	margin: 0 auto;
+       	padding-top: 0.16rem;
+       }
+       .footer .container ul{
+        width: 5.52rem;
+       	height: 0.784rem;
+       	text-align: center;
+        font-size: 0;
+       }
+       .footer .container ul li{
+       	float: left;
+       	width: 25%;
+       	height: 0.784rem;
+       }
+
+       .footer .container span{
+       	width :0.736rem;
+       	height: 0.32rem;
+       	font-size: 0.128rem;
+       }
+       .footer .container span.one{
+       	color: #f16528;
+       
+       }
+       .footer .container span.two{
+       	color: #9f9f9f;
+       
+       }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<img src="images3/back.png">
+			<img src="images3/wenzi1.png">
+			<img src="images3/share.png">
+		</div>
+	</div>
+	<div class="banner">
+		<div class="container">
+		  <div class="banner-top">
+			<img src="images3/banner.png">
+		  </div>
+			<span>188评论</span>
+		</div>
+	</div>
+	<div class="list">
+		<div class="container">
+			<ul>
+                        <li><a href="#"><img src="images3/list01.png"><br/><span>历史</span></a></li>
+                        <li><a href="#"><img src="images3/list02.png"><br/><span>小费</span></a></li>
+                        <li><a href="#"><img src="images3/list03.png"><br/><span>收藏</span></a></li>
+                        <li><a href="#"><img src="images3/list04.png"><br/><span>登记</span></a></li>
+                  </ul>
+		</div>
+	</div>
+	<div class="tu">
+		<div class="container">
+			<div class="tu-left1">
+                        <img src="images3/icon01.png" class="one">
+                        <img src="images3/wenzi2.png" class="two">
+                  </div>
+                  <div class="tu-left2">
+                        <span>900米 张江镇 港台甜品</span><br/>
+                        <span>营业时间: 10:00PM ~ 10:00AM</span><br/>
+                        <span>0260-2611254</span>
+                  </div>
+			<div class="tu-left3">
+                        <img src="images3/pic02.png" class="one">
+                        <img src="images3/pic01.png" class="one">
+                        <img src="images3/book.png" class="two">
+                        <img src="images3/unknow.png" class="two">
+                  </div>
+                  <div class="tu-left4">
+                        <img src="images3/coffee.png">
+                  </div>
+		</div>
+
+	</div>
+	<div class="talk">
+		<div class="container">
+			<span class="one">热门评论</span>
+			<table >
+				<tr>
+					<td><img src="images3/talk01.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number01.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images3/talk02.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number02.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images3/talk03.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number03.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images3/talk04.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number04.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images3/talk05.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number05.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images3/talk06.png"></td>
+					<td><span>这家店只点了他们墙上写的两个招牌点心，不过真的很不错，味道好吃的。</span></td>
+					<td><img src="images3/number06.png"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="#"><img src="images3/footer01.png"><br/><span class="one">搜索</span></a></li>
+				<li><a href="#"><img src="images3/footer02.png"><br/><span class="two">收藏</span></a></li>
+				<li><a href="#"><img src="images3/footer03.png"><br/><span class="two">历史</span></a></li>
+				<li><a href="#"><img src="images3/footer04.png"><br/><span class="two">我</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>腾讯游戏</title>
+	<style>
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       a{
+       	text-decoration: none;
+       }
+       ul{
+       	list-style: none;
+       }
+    /*top样式开始*/
+       .top{
+       	width: 100%;
+        min-width: 1000px;
+       	height: 42px;
+       	background-color: #fff;
+       }
+       .top .container{
+        width: 1000px;
+        margin:auto;
+        height: 42px;
+       }
+       .top .top-left{
+        float: left;
+       }
+       .top .top-left i{
+
+        background-image: url(images2/ost-bg.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: 0 -37px;
+        width: 218px;
+        height: 40px;
+       }
+       .top .top-right{
+        float: right;
+        height: 40px;
+        padding-top: 510x;
+       }
+       .top .top-right i{
+        background-image: url(images2/ost-bg.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: -150px -134px;
+        width: 14px;
+        height: 14px;
+       }
+    /*top样式结束*/
+    /*header样式开始*/
+      .header{
+        width: 100%;
+        min-width: 1000px;
+        height: 91px;
+        background-color: #272b2e;
+       }
+       .header .container{
+        width: 1000px;
+        margin:0 auto;
+        clear: both;
+       }
+       .header .header-left{
+        float: left;
+        margin-top: 20px;
+       }
+       .header .header-right{
+        float: right;
+
+       }
+       .header .header-right li{
+        width: 85px;
+        height: 100%;
+        line-height:85px;
+        text-align: center;
+        float: left;
+        border-top: 3px solid transparent;
+       }
+       .header .header-right li.now{
+        border-top: 3px solid #0486eb;
+       }
+       .header .header-right li:hover{
+        border-top: 3px solid #0486eb;
+       }
+       .header .header-right li a{
+        color:#406fa4;
+       }
+       .header .header-right li.now a{
+        color:#0486eb;
+       }
+       .header .header-right li:hover a{
+        color:#0486eb;
+       }
+    /*header样式结束*/
+    /*banner样式开始*/
+       .banner{
+       	width: 100%;
+        min-width: 1000px;
+       	height: 400px;
+
+        position: relative;
+       }
+       .banner .pic{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+       }
+       .banner .pic img{
+        width: 100%;
+        height: 400px;
+
+
+       }
+       
+       .banner .num{
+        position: absolute;
+        left:206px ;
+        bottom: 16px;
+       }
+       .banner .num a i{
+        background-image: url(images2/tgp_sprites241.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: -216px -47px;
+        width: 30px;
+        height: 18px;
+       
+       }
+       .banner .num a:hover i{
+        background-image: url(images2/tgp_sprites241.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: -216px 0px;
+        width: 30px;
+        height: 18px;
+       }
+       .banner .pic i{
+        background-image: url(images2/tgp_sprites241.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: 0 -247px;
+        width: 260px;
+        height: 66px;
+        left: 203px;
+        top: 245px;
+        position: absolute;
+       
+       }
+    /*banner样式结束*/
+    /*content-top样式开始*/
+        .content-top{
+        	width:100%;
+          min-width: 1000px;
+        	height:700px;
+        	background-color: #fff;
+          margin-top: 50px;
+        }
+        .content-top .container{
+        	width: 970px;
+        	height: 700px;
+        	
+        	margin:0 auto;
+        } 
+        .content-top .left{
+        	width: 720px;
+        	height: 700px;
+        	
+        	float:left;
+        	
+        }
+        .content-top .news{
+        	width: 720px;
+        	height: 370px;
+        }
+        .content-top .news i{
+          background-image: url(images2/tgp_sprites241.png);
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-position: -215px -93px;
+          width: 22px;
+          height: 22px;
+        }
+        .content-top .news span{
+          text-align: center;
+        	display: inline-block;
+        	float: left;
+        	color: #000;
+        	margin-top: -40px;
+        }
+        .content-top .news button{
+        	width: 86px;
+        	height: 32px;
+        	background-color: #3eacfe;
+        	float: right;
+        	margin-top: -40px;
+          margin-right: 60px;
+        	border:1px solid grey;
+        	color: #fff;
+        	font-weight: bolder;
+        }
+        .content-top .news-left img{
+        	float: left;
+        }
+        .content-top .news-right{
+        
+        	text-align: center;
+        }
+        .content-top .news-right li{
+            display: inline-block;
+       	    float: left;
+       	    padding-left: 36px;
+       	    padding-right: 36px;
+       	   
+       	    padding-bottom: 10px;
+       	    background-color: #cedced;
+       	    text-align: center;
+        }
+        .content-top .news-right li:hover{
+        	background-color: #fff;
+        	border-top: 1px solid #009cff;
+        	color: #009cff;
+        }
+        .content-top .news-right li:hover a{
+        	color: #009cff;
+        }
+
+        .content-top .news-right h3{
+        	color:#009cff;
+        	
+        }
+         .content-top .news-right .text a{
+          display: block;
+         }
+         .content-top .news-right p{
+         	text-align: left;
+         	margin-top: 5px;
+          margin-left: 5px;
+         	color:#434343;
+         }
+         .content-top .activity{
+         	width: 720px;
+         	height: 360px;
+         }
+         .content-top .activity i{
+          background-image: url(images2/tgp_sprites241.png);
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-position: -215px -121px;
+          width: 22px;
+          height: 22px;
+         }
+         .content-top .activity span{
+          text-align: center;
+        	display: inline-block;
+        	float: left;
+        	color: #000;
+        	margin-top: -40px;
+        }
+        .content-top .activity button{
+        	width: 86px;
+        	height: 32px;
+        	background-color: #3eacfe;
+        	float: right;
+        	margin-top: -40px;
+          margin-right: 50px;
+        	border:1px solid grey;
+        	color: #fff;
+        	font-weight: bolder;
+        }
+         .content-top .activity .pic-left{
+         	float: left;
+         }
+          .content-top .activity .pic-right{
+          	float: right;
+          	width: 440px;
+          	height: 280px;
+          	padding: 10px;
+
+          }
+          .content-top .activity .pic-right img{
+          	padding-left: 5px;
+            padding-bottom: 5px;
+          }
+          .content-top .right{
+          	float: right;
+          	width: 235px;
+          	height: 700px;
+          }
+          .content-top .right i{
+            background-image: url(images2/tgp_sprites241.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: -215px -144px;
+            width: 22px;
+            height: 22px;
+         }
+          .content-top .right span{
+            text-align: center;
+          	display: inline-block;
+        	  float: left;
+        	  color: #000;
+        	  margin-top: -40px;
+          }
+          .content-top .right img{
+          	margin-left: 15px;
+          }
+    /*content-top样式结束*/
+    /*content-bottom样式开始*/
+          .content-bottom{
+          	width: 1000px;
+            min-width: 1000px;
+          	height: 330px;
+          	margin: 0 auto;
+          }
+          .content-bottom .left{
+          	width: 705px;
+          	height: 335px;
+          	float: left;
+          }
+          .content-bottom .left .star{
+          	width: 234px;
+          	height: 326px;
+          	float: left;
+          }
+          .content-bottom .left .star>span{
+            text-align: center;
+          	display: inline-block;
+        	  float: left;
+        	  color: #000;
+        	  margin-top: -40px;
+          }
+          .content-bottom .star i{
+            background-image: url(images2/tgp_sprites241.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: -215px -167px;
+            width: 22px;
+            height: 22px;
+          }
+          .content-bottom .star .list span.one{
+          	width: 20px;
+          	height: 20px;
+          	background-color: #ff8400;
+          }
+          .content-bottom .star .list img{
+          	width: 232px;
+          }
+          .content-bottom .star .list ul{
+            list-style: none;
+          }
+          .content-bottom .star .list a{
+            color:#44474e;
+          }
+          .content-bottom .list li img{
+            display: none;
+          }
+          .content-bottom .list li:hover img{
+            display: block;
+          }
+          .content-bottom .star .list button{
+          	width: 50px;
+          	height: 30px;
+          	background-color: #42b6ff;
+          	border:1px solid grey;
+          	color:#fff;
+          }
+          .content-bottom .left .movie{
+          	width: 430px;
+          	height: 326px;
+          	float: right;
+          }
+          .content-bottom .left .movie i{
+            background-image: url(images2/tgp_sprites241.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: -215px -191px;
+            width: 22px;
+            height: 22px;
+          }
+          .content-bottom .left .movie span{
+            text-align: center;
+            display: inline-block;
+        	  float: left;
+        	  color: #000;
+        	  margin-top: -40px;
+          }
+          .content-bottom .left .movie img{
+           	padding-left: 20px;
+           	margin-top: 20px;
+          }
+          .content-bottom .right{
+          	width: 260px;
+          	height: 326px;
+          	float: right;
+          }
+          .content-bottom .right i{
+            background-image: url(images2/tgp_sprites241.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: -215px -212px;
+            width: 22px;
+            height: 22px;
+          }
+          .content-bottom .right span{
+            text-align: center;
+          	display: inline-block;
+        	  float: left;
+        	  color: #000;
+        	  margin-top: -40px;
+          }
+          .content-bottom .right img{
+          	padding-left: 20px;
+          	padding-top: 10px;
+          	padding-bottom: 10px;
+           	margin-top: 20px;
+          }
+    /*content-bottom样式结束*/
+    /*footer样式开始*/
+          .footer{
+         	  width: 100%;
+            min-width: 1000px;
+           	height: 168px;
+         	  background-color: #181c23;
+          }
+          .footer .container{
+         	  width: 1000px;
+         	  margin:0px auto;
+         	  padding-top: 30px;
+         	  text-align: center;
+          }
+          .footer li{
+         	  float: left;
+          }
+          .footer li a{
+         	  color: #5f697d;
+          }
+          .footer span{
+         	  text-align: center;
+         	  color:  #5f697d;
+          }
+    /*footer样式结束*/
+    .wm{
+      width: 164px;
+      height: 168px;
+      position: relative;
+      left: 1170px;
+      top: 260px;
+      position: fixed;
+      z-index: 10;
+      border:1px solid #e1e1e1;
+      padding-left: 10px;
+
+    }
+    .wm img{
+      width: 145px;
+      height: 145px;
+    }
+    .wm span{
+      color:#ff0d0d;
+      font-weight: bolder;
+    }
+	</style>
+</head>
+<body>
+  <div class="wm"><span>扫一扫下载掌上TGP</span><br/><img src="images2/qcode.png"/></div>
+	<div class="top">
+    <div class="container">
+	    <div class="top-left">
+		  <a href="#"><i></i></a>
+		   <img src="images2/1774456699_825088594_1472020355_230_40.jpg" />
+		  </div>
+		  <div class="top-right">
+			<span>腾讯游戏排行榜<i></i></span>
+		  </div>
+    </div>
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="header-left">
+        <img src="images2/logo.png" />
+      </div>
+      <div class="header-right">
+        <ul>
+          <li class="now"><a href="#">主页</a></li>
+          <li><a href="#">游戏助手</a></li>
+          <li><a href="#">活动中心</a></li>
+          <li><a href="#">TGP BOX</a></li>
+          <li><a href="#">掌上TGP</a></li>
+          <li><a href="#">TGP2.0</a></li>
+          <li><a href="#">网吧专版</a></li>
+          <li><a href="#">官方论坛</a></li>
+        </ul>
+      </div>
+		</div>
+	</div>
+	<div class="banner">
+    
+      <div class="pic">
+          <i></i>
+          <img id="one" src="images2/0.jpg" />
+          <img id="two" src="images2/0_004.jpg" />
+          <img id="three" src="images2/0_009.jpg" />
+          <img id="four" src="images2/0_011.jpg" />
+        </div>
+      <div class="num">
+        <a href="#one"><i></i></a>
+        <a href="#two"><i></i></a>
+        <a href="#three"><i></i></a>
+        <a href="#four"><i></i></a>
+      </div>
+	</div>
+	<div class="content-top">
+		<div class="container">
+			<div class="left">
+				<div class="news">
+					<span><i></i>新闻中心</span>
+					<button type="submit">查看更多+</button>
+					<div class="news-left">
+						<img src="images2/14719449002159.jpg" />
+					</div>
+					<div class="news-right">
+						<ul>
+						   <li><a href="#">全部</a></li>
+						   <li><a href="#">公告</a></li>
+						   <li><a href="#">活动</a></li>
+						   <li><a href="#">媒体</a></li>
+						</ul><br/><br/>
+						<div class="text">
+						<h3>腾讯游戏平台(TGP)版本更新日志</h3><br/>
+             <p>&nbsp;&nbsp;&nbsp;2016-8-25版本灰度更新至2.2.3.3989，单<br/>&nbsp;&nbsp;&nbsp;机游戏专区-国产游戏：《符石守护者》上线</p><br/>
+						 <a href="#"><p>&nbsp;&nbsp;&nbsp;[活动]史上最强英雄的崛起</p></a>
+						 <a href="#"><p>&nbsp;&nbsp;&nbsp;[活动]TGP全新特权:好莱坞专属福利上线</p></a>
+						 <a href="#"><p>&nbsp;&nbsp;&nbsp;[媒体]神器在手，TGP新功能体验</p></a>
+						 <a href="#"><p>&nbsp;&nbsp;&nbsp;[公告]一周最强男英雄迎接魔法革新</p></a>
+						 <a href="#"><p>&nbsp;&nbsp;&nbsp;[活动]史上最强英雄的崛起</p></a>
+             <a href="#"><p>&nbsp;&nbsp;&nbsp;[活动]TGP全新特权:好莱坞专属福利上线</p></a>
+            </div>
+					</div>
+				</div>
+				<div class="activity">
+					<span><i></i>最新活动</span>
+					<button type="submit">查看更多+</button>
+					<div class="pic-left">
+					<img src="images2/14712313355962.jpg" />
+					</div>
+					<div class="pic-right">
+					<img src="images2/14719450705598.jpg" />
+					<img src="images2/14714269587936.jpg" />
+					<img src="images2/14703819383997.jpg" />
+					<img src="images2/14703807505770.jpg" />
+					</div>
+
+				</div>
+			</div>
+			<div class="right">
+				<span><i></i>功能直通车</span>
+				<img src="images2/bus_1.jpg" />
+				<img src="images2/bus_2.jpg" />
+				<img src="images2/bus_3.jpg" />
+				<img src="images2/bus_4.jpg" />
+				<img src="images2/bus_5.jpg" />
+				<img src="images2/bus_7.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="content-bottom">
+		<div class="container">
+			<div class="left">
+				<div class="star">
+					<span><i></i>新游关注榜</span>
+					<div class="list">
+           <ul>
+						<li><span class="one">01</span>&nbsp;<a href="#">轩辕世界</a>&nbsp;<button type="submit">官网</button>&nbsp;<button type="submit">抢号</button><br/>
+						<img src="images2/14721954306469.jpg" /></li>
+
+						<li><span class="one">02</span>&nbsp;<a href="#">天涯明月刀</a><button type="submit">官网</button>&nbsp;<button type="submit">抢号</button><br/>
+            <img src="images2/0_003.jpg">
+            </li>
+
+						<li><span class="one">03</span>&nbsp;<a href="#">蜀山战纪</a>&nbsp;<button type="submit">官网</button>&nbsp;<button type="submit">抢号</button><br/>
+            <img src="images2/0_007.jpg">
+            </li>
+
+						<li><span class="one">04</span>&nbsp;<a href="#">枪神纪</a>&nbsp;&nbsp;<button type="submit">官网</button>&nbsp;<button type="submit">抢号</button><br/>
+            <img src="images2/0_008.jpg">
+            </li>
+
+            </ul>
+					</div>
+
+				</div>
+				<div class="movie">
+					<span><i></i>热门视频</span>
+					<img src="images2/0_005.jpg" />
+					<img src="images2/0_002.jpg" />
+					<img src="images2/14703807505770.jpg" />
+					<img src="images2/0_006.jpg" />
+				</div>
+			</div>
+			<div class="right">
+				<span><i></i>合作伙伴</span>
+				<img src="images2/2002554700970.jpg" />
+				<img src="images2/498971240436415.jpg" />
+				<img src="images2/526511395804138.png" />
+				<img src="images2/59972320650436.png" />
+			</div>
+		</div>
+	</div>
+  <div class="footer">
+	    <div class="container">
+		    <div class="nav">
+			      <ul>
+				      <li><a href="#">腾讯互动娱乐&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;服务条款&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;广告服务&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;腾讯游戏招聘&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;腾讯游戏客服&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;游戏地图&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;游戏活动&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;商务合作&nbsp;|</a></li>
+				      <li><a href="#">&nbsp;网站导航</a></li>
+			      </ul>
+		    </div>
+		      <span>COPYRIGHT&nbsp;&copy;&nbsp;1998&nbsp;-&nbsp;2016&nbsp;TENCENT.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.</span><br/>
+		      <span>腾讯公司&nbsp;版权所有</span>
+		  </div>
+	</div>
+</body>
+</html>

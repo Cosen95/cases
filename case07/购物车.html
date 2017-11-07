@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles/right.css"/>
+
+		<style type="text/css">
+			div,img,span,ul,li{ 
+				margin:0; 
+				padding:0;
+				}
+			ul,ol{ 
+				list-style:none;
+				}
+			.imgList li{
+				float:left;
+				margin:4px;
+				}
+			.pro_detail_left span{
+				display:block; 
+				text-align:center; 
+				width:300px;}
+			.pro_detail_left{ 
+				width:350px; 
+				float:left;
+				}
+				
+			div.zoomdiv {
+				z-index:999;
+				position: absolute;
+				top:0px;
+				left:0px;
+				width:200px;
+				height:200px;
+				background:#ffffff;
+				border:1px solid #CCCCCC;
+				display:none;
+				text-align:center;
+				overflow:hidden;
+			}
+			div.jqZoomPup {
+				z-index: 999;
+				visibility: hidden;
+				position : absolute;
+				top:0px;
+				left:0px;
+				width: 150px !important;
+				height: 150px !important;
+				border: 1px solid #aaa;
+				background: #ffffff url(pro_img/zoomlens.gif) 50% top  no-repeat;;
+				opacity: 0.5;
+				-moz-opacity: 0.5;
+				-khtml-opacity: 0.5;
+				filter: alpha(Opacity=50);
+			}
+
+		</style>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery.jqzoom.js"></script>
+	</head>
+	<body>
+		<div class="pro_detail">
+			<div class="pro_detail_left">
+				<div class="jqzoom">
+					<img src="pro_img/blue_one_small.jpg" class="fs" alt="" jqimg="pro_img/blue_one_big.jpg" id="bigImg"/>
+				</div>
+				<a href="pro_img/blue_one_big.jpg" id="thickImg" title="介绍文字" class="thickbox"  rel="mypic" >
+                	<img alt="点击看大图" src="pro_img/look.gif" />
+            	</a>
+				<ul class="imgList">
+					<li><img src="pro_img/blue_one.jpg" alt="" /></li>
+					<li><img src="pro_img/blue_two.jpg" alt="" /></li>
+					<li><img src="pro_img/blue_three.jpg" alt="" /></li>
+				</ul>
+        	</div>
+ 		</div>
+	 	<div class="pro_detail_right">
+			<h4>免烫高支棉条纹衬衣</h4>
+			<p>全新精品高支棉衬衫再次提升品质，精选100%新疆长绒棉织造而成，平整度好，短绒少； 80-100高支双股经纬交织，带来无与伦比的舒适享受；而且面料反光效果好，具有漂亮的光泽，质感上佳，有利于免烫效果的维持。※不仅如此，深受消费者欢迎的经典款式使精品高支棉衬衫更贴合东方人身型气质，多款衬衫还采用简单且个性鲜明条纹元素，利用最为单纯的几何线条，透过条纹的粗细、宽窄间的重组，带出令人耳目一新的时尚气息，更显出俊朗男士的挺拔身型！</p>
+			<p><strong>现价：200元  <del>原价：300元</del></strong></p>
+			<p><strong>编号：33313993</strong></p>
+			<div class="color_change">
+				颜色：<strong>蓝白</strong>
+				<ul>
+					<li><img src="pro_img/blue.jpg" alt="蓝白"/></li>
+					<li><img src="pro_img/yellow.jpg" alt="黄白" /></li>
+					<li><img src="pro_img/green.jpg" alt="粉绿" /></li>
+				</ul>
+			</div>
+			<div class="pro_size">
+				尺寸：<strong>未选择</strong>
+				<ul>
+					<li><span>S</span></li>
+					<li><span>L</span></li>
+					<li><span>SL</span></li>
+					<li><span>LL</span></li>
+				</ul>
+			</div>
+			<div class="pro_num">
+				数量：
+				<select id="num_sort" style="width:40px;" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="pro_price">
+				总计：<span>200</span>元
+			</div>
+			<div class="pro_rating">
+				给商品评分：
+				<ul class="rating nostar">
+					<li class="one"><a href="#" title="1分">1</a></li>
+					<li class="two"><a href="#" title="2分">2</a></li>
+					<li class="three"><a href="#" title="3分">3</a></li>
+					<li class="four"><a href="#" title="4分">4</a></li>
+					<li class="five"><a href="#" title="5分">5</a></li>
+				</ul>
+			</div>
+			<div id="cart">
+				<a href="#"><img src="pro_img/btn_cart.png"/></a>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		$(function(){
+			$(".imgList").on("click","li",function(){
+				var $url = $(this).find("img").attr("src");
+				var $dotIndex = $url.lastIndexOf(".");
+				var $start = $url.substring(0,$dotIndex);  //.前面的字符串
+				var $end = $url.substring($dotIndex);   //.jpg
+				var $smallSrc = $start + "_small" + $end;
+				var $bigSrc = $start + "_big" + $end;
+				$("#bigImg").attr({"src":$smallSrc,"jqimg":$bigSrc});
+				$("#thickImg").attr("href",$bigSrc);
+			})
+			
+			$(".color_change li").click(function(){
+				var $url = $(this).children("img").attr("src");
+				var $dotIndex = $url.lastIndexOf(".");
+				var $start = $url.substring(0,$dotIndex);//.前面的字符串
+//				alert($start);
+				var $end = $url.substring($dotIndex);   //.jpg
+				var $smallSrc = $start + "_one_small" + $end;
+				var $bigSrc = $start + "_one_big" + $end;
+				var $smallList = $start + ".html";
+				$("#bigImg").attr({"src":$smallSrc,"jqimg":$bigSrc});
+				$("#thickImg").attr("href",$bigSrc);
+				$(".imgList").empty().load($smallList);
+			})
+			$(".jqzoom").jqueryzoom({xzoom:300,yzoom:300});
+
+		})
+	</script>
+</html>

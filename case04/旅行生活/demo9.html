@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" href="css/media-100.css">
+	<style>
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       ul{
+       	list-style: none;
+       }
+       a{
+       	text-decoration: none;
+       }
+
+       .header{
+       	width: 100%;
+       	height: 0.64rem;
+       	background-color: #f05b1a;
+       }
+       .header .container{
+       	width: 5.56rem;
+       	height: 0.64rem;
+       	line-height: 0.64rem;
+       	margin:0 auto;
+       	text-align: center;
+       	font-size: 0;
+       }
+       .header .container img{
+        margin-top: 0.16rem;
+        width: 0.88rem;
+       }
+       .tab{
+       	width: 100%;
+       	height: 0.736rem;
+       	background-color: #f2733c;
+       }
+       .tab .container{
+       	width: 5.56rem;
+       	height: 0.736rem;
+        padding-top: 0.1rem;
+       	margin: 0 auto;
+       }
+       .tab .container ul{
+
+       	width: 5.56rem;
+       	height: 0.448rem;
+        border:0.016rem solid #fff;
+       	font-size: 0;
+       	border-radius: 0.08rem;
+       }
+       .tab .container li{
+       	float: left;
+       	width: 50%;
+       	height: 100%;
+       	line-height: 0.448rem;
+        border-radius: 0 0.08rem 0.08rem 0;
+       	text-align: center;
+       	font-size:0.224rem;
+       }
+       .tab .container li.now{
+       	background-color: #fff;
+       	border-radius: 0.08rem 0 0 0.08rem;
+       }
+       .tab .container li.now a{
+       
+       	color: #f05b1a;
+       }
+       .tab .container li a{
+
+       	color: #fff;
+       }
+       .add{
+       	width: 100%;
+       	height: 1.344rem;
+       	background-color: #eff0f4;
+       }
+       .add .container{
+       	width: 5.56rem;
+       	height: 1.344rem;
+       	margin:0 auto;
+       	font-size: 0;
+       	padding-top: 0.16rem;
+       }
+       .add .container .add-left{
+       	width: 0.512rem;
+       	height: 0.64rem;
+       	float: left;
+      
+       }
+       .add .container .add-left img{
+              width: 0.384rem;
+       }
+       .add .container .add-right{
+       	width: 4.8rem;
+       	height: 0.896rem;
+       	background-image: url(images9/bg01.png);
+       	background-repeat: no-repeat;
+       	background-size: cover;
+       	float: right;
+       	padding-left: 0.16rem;
+       }
+       .add .container .add-right span.one{
+       	width: 2.56rem;
+       	height: 0.352rem;
+       	color: #303030;
+       	font-size:0.224rem;
+       }
+       .add .container .add-right span.two{
+       	width: 2.56rem;
+       	height: 0.352rem;
+       	color: #575757;
+       	font-size:0.192rem;
+       }
+       .choice{
+       	width: 100%;
+       	height: 5.232rem;
+       	background-color: #fff;
+       }
+       .choice .container{
+       	font-size: 0;
+       	width: 5.616rem;
+       	height: 5.232rem;
+       	margin:0 auto;
+       	
+       }
+       .choice .container img{
+        
+        height: 0.4rem;
+       	margin-top: 0.16rem;
+       	margin-right: 0.08rem;
+       }
+       .button{
+       	width: 100%;
+       	height: 0.848rem;
+       	background-color: #fff;
+       }
+       .button .container{
+       	width: 5.648rem;
+       	height: 0.848rem;
+
+       	margin:0 auto;
+       	font-size: 0;
+       }
+        .button .container img{
+        width: 2.56rem;
+        margin-top: 0.16rem;
+       
+        }
+        .button .container img:nth-child(1){
+        	float: left;
+        }
+        .button .container img:nth-child(2){
+        	float: right;
+        }
+        .look{
+        	width: 100%;
+        	height: 0.656rem;
+        	background-color: #f0f1f5;
+          font-size: 0;
+        }
+        .look img:nth-child(1){
+          width: 1.88rem;
+        	float: left;
+        	margin-top: 0.16rem;
+        	margin-left: 0.16rem;
+        }
+        .look img:nth-child(2){
+          width: 0.24rem;
+        	float: right;
+        	margin-top: 0.16rem;
+        	margin-right: 0.16rem;
+        }
+       .footer{
+       	position: fixed;
+        
+       	left: 0;
+       	bottom:0;
+       	width: 100%;
+       	height: 0.784rem;
+       	background-color: #fff;
+       	border-top: 0.024rem solid #e4e2e1;
+       }
+       .footer .container{
+       	width: 5.52rem;
+       	height: 0.784rem;
+       	margin: 0 auto;
+       	padding-top: 0.16rem;
+       }
+       .footer .container ul{
+        width: 5.52rem;
+       	height: 0.784rem;
+       	text-align: center;
+        font-size: 0;
+       }
+       .footer .container ul li{
+       	float: left;
+       	width: 25%;
+       	height: 0.784rem;
+       }
+
+       .footer .container span{
+       	width :0.736rem;
+       	height: 0.32rem;
+       	font-size: 0.128rem;
+       }
+       .footer .container span.one{
+       	color: #f16528;
+       
+       }
+       .footer .container span.two{
+       	color: #9f9f9f;
+       
+       }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<img src="images9/wenzi01.png">
+		</div>
+	</div>
+	<div class="tab">
+		<div class="container">
+			<ul>
+				<li class="now"><a href="#">兴趣</a></li>
+				<li><a href="#">建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="add">
+		<div class="container">
+			<div class="add-left"><img src="images9/f.png"></div>
+			<div class="add-right">
+				<span class="one">定制你的风格</span><br/>
+				<span class="two">添加兴趣，以获得更个性化的建议</span>
+			</div>
+		</div>
+	</div>
+	<div class="choice">
+		<div class="container">
+			<img src="images9/pic01.png">
+			<img src="images9/pic02.png">
+			<img src="images9/pic03.png">
+			<img src="images9/pic04.png">
+			<img src="images9/pic05.png">
+			<img src="images9/pic06.png">
+			<img src="images9/pic07.png">
+			<img src="images9/pic08.png">
+			<img src="images9/pic09.png">
+			<img src="images9/pic10.png">
+			<img src="images9/pic11.png">
+			<img src="images9/pic12.png">
+			<img src="images9/pic13.png">
+			<img src="images9/pic14.png">
+			<img src="images9/pic15.png">
+		</div>
+	</div>
+	<div class="button">
+		<div class="container">
+			<img src="images9/button01.png">
+			<img src="images9/button02.png">
+		</div>
+	</div>
+	<div class="look">
+		<img src="images9/look01.png">
+	    <img src="images9/look02.png">
+	</div>
+	<div class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="#"><img src="images9/footer01.png"><br/><span class="two">搜索</span></a></li>
+				<li><a href="#"><img src="images9/footer02.png"><br/><span class="two">收藏</span></a></li>
+				<li><a href="#"><img src="images9/footer03.png"><br/><span class="two">历史</span></a></li>
+				<li><a href="#"><img src="images9/footer04.png"><br/><span class="one">我</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	   *{
+	   	margin: 0;
+	   	padding: 0;
+	   }
+	   body{
+	   	background: #ccc;
+	   }
+       .container{
+       	width: 800px;
+       	height:400px;
+       	margin:100px auto;
+        border:20px dashed purple;
+        position: relative;
+       }
+       .pic{
+       	width: 800px;
+       	height: 400px;
+       	overflow: hidden;
+       }
+       .pic img{
+       	width: 800px;
+       	height: 400px;
+       }
+       .num{
+       	position: absolute;
+        left: 43%;
+       	bottom: 20px;
+       }
+       .num a{
+       	display: inline-block;
+       	width: 20px;
+       	height: 20px;
+       	line-height: 20px;
+       	text-align: center;
+       	background-color: orange;
+        border: 1px solid  #ccc;
+        margin-right: 10px;
+        opacity: 0.4;
+        text-decoration: none;
+       }
+       .num a:hover{
+       	opacity: 1;
+       }
+	</style>
+</head>
+<body>
+    <div class="container">
+        <div class="pic">
+        	<img id="one" src="images/1.jpg" />
+        	<img id="two" src="images/2.jpg" />
+        	<img id="three" src="images/3.jpg" />
+        	<img id="four" src="images/4.jpg" />
+        </div>
+    	<div class="num">
+    		<a href="#one">1</a>
+    		<a href="#two">2</a>
+    		<a href="#three">3</a>
+    		<a href="#four">4</a>
+    	</div>
+    </div>
+</body>
+</html>

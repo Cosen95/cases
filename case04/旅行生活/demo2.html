@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" href="css/media-100.css">
+	<style>
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       ul{
+       	list-style: none;
+
+       }
+       a{
+       	text-decoration: none;
+       }
+       body{
+       	background-image: url(images2/bgd.png);
+       	background-repeat: no-repeat;
+       	background-size: cover;
+       }
+       .header{
+       	width: 100%;
+       	height: 1.168rem;
+       	background-color: #f05b1a;
+       }
+       .header .container{
+       	width: 5.52rem;
+       	height: 1.168rem;
+       	margin: 0 auto;
+       }
+       .header .container .header-top{
+       	width: 5.52rem;
+       	height: 0.512rem;
+       	font-size: 0;
+       	text-align: center;
+       }
+       .header .container .header-top img.one{
+       	float: left;
+       	margin-top: 0.08rem;
+           width: 0.264rem;
+       }
+       .header .container .header-top img.two{
+       	float: right;
+       	margin-top: 0.08rem;
+            width: 0.264rem;
+       }
+       .header .container .header-top input{
+            padding-left: 0.48rem;
+       	width: 3.8rem;
+       	height: 0.448rem;
+       	background-color: #fff;
+       	border-radius: 0.08rem;
+      
+       	background-image: url(images2/search-icon.png);
+        background-repeat: no-repeat;
+        background-position: 0.1rem center ;
+       }
+       .header .container .header-bottom{
+       	width: 5.52rem;
+       	height: 0.48rem;
+       	text-align: center;
+       	font-size: 0;
+       }
+       .header .container .header-bottom input {
+       	padding-left: 0.48rem;
+       	width: 3.8rem;
+       	height: 0.448rem;
+       	background-color: #fff;
+       	border-radius: 0.08rem;
+       	background-image: url(images2/icon.png);
+        background-repeat: no-repeat;
+        background-position: 0.1rem center ;
+       }
+       .choice{
+       	width: 100%;
+       	height: 0.624rem;
+       	background-color: #f2733c;
+       }
+       .choice .container{
+       	width: 4.528rem;
+       	height: 0.624rem;
+       	margin:0 auto;
+       }
+       .choice .container img.one{
+            width: 1.04rem;
+       	float: left;
+            margin-left: 0.16rem;
+       }
+       .choice .container img.two{
+            width: 1.04rem;
+       	float: right;
+       	margin-left: 0.1rem;
+       }
+       .star{
+       	position: relative;
+       	top:7rem; 
+       	width: 100%;
+       	height: 1.88rem;
+       	margin:0 auto;
+       	background-color: #fff;
+       }
+       .star .container{
+       	width: 5.56rem;
+       	height: 1.88rem;
+            margin:0 auto;
+       
+       }
+       .star .container .star-left{
+       	position: absolute;
+       	width: 1.504rem;
+       	height: 1.456rem;
+       
+           left: 0.232rem;
+           top: 0.16rem;
+       }
+       .star .container .star-left img{
+            width: 1.504rem;
+       }
+       .star .container .star-center{
+       	position: absolute;
+       	top: 0.16rem;
+       	left: 1.8rem;
+       	width: 2.784rem;
+       	height: 1.392rem;
+       	font-size: 0;
+       }
+       .star .container .star-center span{
+       	width: 2.7rem;
+       	height: 0.368rem;
+       }
+       .star .container .star-center span.one{
+       	font-size: 0.24rem;
+       	color:#f05b1a;
+       	font-weight: bolder;
+       }
+       .star .container .star-center span.two{
+       	font-size: 0.16rem;
+       	color:#737373;
+       }
+       .star .container .star-center .img{
+       	width: 1.024rem;
+       	height: 0.416rem;
+        padding-top: 0.1rem;
+       	border-radius: 0.08rem;
+       	text-align: center;
+       	background-color: #eff0f4;
+       }
+       .star .container .star-right{
+       	position: absolute;
+       	right: 0.512rem;
+       	top:0.224rem;
+       	width: 0.6rem;
+       	height: 0.56rem;
+       	font-size: 0;
+       }
+      .star .container .star-right img{
+            width: 0.6rem;
+            height: 0.56rem;
+      }
+       .footer{
+       	position: fixed;
+       	left: 0;
+       	bottom:0;
+       	width: 100%;
+       	height: 0.8rem;
+       	background-color: #fff;
+       	border-top: 0.024rem solid #e4e2e1;
+       }
+       .footer .container{
+       	width: 5.52rem;
+       	height: 0.784rem;
+       	margin: 0 auto;
+       	padding-top: 0.16rem;
+       }
+       .footer .container ul{
+        width: 5.52rem;
+       	height: 0.784rem;
+       	text-align: center;
+        font-size: 0;
+       }
+       .footer .container ul li{
+       	float: left;
+       	width: 25%;
+       	height: 0.784rem;
+       }
+
+       .footer .container span{
+       	width :0.736rem;
+       	height: 0.32rem;
+       	font-size: 0.128rem;
+       }
+       .footer .container span.one{
+       	color: #f16528;
+       
+       }
+       .footer .container span.two{
+       	color: #9f9f9f;
+       
+       }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header-top">
+				<img src="images2/back.png" class="one">
+				<input type="text" value="食物">
+				<img src="images2/list.png" class="two">
+			</div>
+			<div class="header-bottom">
+				<input type="text" value="我的附近">
+			</div>
+		</div>
+	</div>
+	<div class="choice">
+		<div class="container">
+			<img src="images2/button01.png" class="one">
+			<img src="images2/button02.png" class="two">
+			<img src="images2/button03.png" class="two">
+		</div>
+	</div>
+	<div class="star">
+		<div class="container">
+			<div class="star-left">
+				<img src="images2/pic01.png">
+			</div>
+			<div class="star-center">
+				<span class="one">1.一个有名的蛋糕甜品店</span>
+				<span class="two">900米 张江镇 港台甜品</span><br/>
+				<span class="two">￥39/人</span><br/>
+				<div class="img"><img src="images2/pic03.png" class="one"></div>
+			</div>
+			<div class="star-right"><img src="images2/pic02.png"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="#"><img src="images2/footer01.png"><br/><span class="one">搜索</span></a></li>
+				<li><a href="#"><img src="images2/footer02.png"><br/><span class="two">收藏</span></a></li>
+				<li><a href="#"><img src="images2/footer03.png"><br/><span class="two">历史</span></a></li>
+				<li><a href="#"><img src="images2/footer04.png"><br/><span class="two">我</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

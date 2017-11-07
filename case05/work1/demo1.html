@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			body{
+				position: relative;
+			}
+			.time{
+				width: 192px;
+				height: 578px;
+				background-color: #fff;
+				float:left;
+				margin-left: 30px;
+				margin-top: 50px;
+				background-color: orangered;
+			}
+			.time p {
+				color:aquamarine;
+				margin-top: 30px;
+			}
+			.rule{
+				width: 152px;
+				height: 556px;
+				background-color: rosybrown;
+				float: right;
+				margin-right: 80px;
+				margin-top: 50px;
+			}
+			.middle{
+				position: absolute;
+				left: 250px;
+				top: 50px;
+				width: 840px;
+				height: 574px;
+			}
+			.middle #first{
+				width: 840px;
+				height: 460px;
+				background-color: cornflowerblue;
+			}
+			.middle .second{
+				width: 840px;
+				height: 32px;
+				background-color: #ccc;
+			}
+			.middle .third{
+				width: 840px;
+				height: 82px;
+			}
+			.middle .third .left{
+				width: 680px;
+				height: 82px;
+			
+				float: left;
+			}
+			.middle .third .left input{
+				width: 680px;
+				height: 82px;
+				border:none;
+				background-color: indianred;
+			}
+			.middle .third .right{
+				width: 160px;
+				height: 82px;
+				background-color: chocolate;
+			    float: right;
+			    text-align: center;
+			    line-height: 82px;
+			}
+			.middle .third .right button{
+				width: 130px;
+				height: 30px;
+				background-color: darksalmon;
+				border: none;
+			}
+		</style>
+	</head>
+	<body onload="setInterval('clock()',1000)">
+		<div class="time">
+		   <p id="timer1"></p>
+		</div>
+		<div class="middle">
+			<div id="first"></div>
+			<div class="second"></div>
+			<div class="third">
+				<div class="left">
+					<input type="text" id="sr" />
+				</div>
+				<div class="right">
+					<button onclick="getValue()">发送</button>
+				</div>
+			</div>
+		</div>
+		<div class="rule">
+			<p>1.不能发空消息</p>
+			<p>2.敏感字***显示</p>
+			<p>3.图片替换 开心 尴尬</p>
+			<p>4.显示聊天内容和时间</p>
+			<p>5.每发一条信息，随机显示名称，先把一些名称定义到Array里面</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+	    function clock(){
+	    	var nowtime;
+	    	nowtime  =new Date();
+	    	document.all.timer1.innerText = "当前时间是：" + nowtime.getHours() + 
+	    	"时" + nowtime.getMinutes() + "分" + nowtime.getSeconds() + "秒";
+	    }
+		function getValue() {
+			var v1;
+			v1 = new Date();
+			var v2 = v1.getHours() + "时" + v1.getMinutes() + "分" + v1.getSeconds() + "秒";
+			var sr = document.getElementById("sr");
+			var s = sr.value;
+			var xs  =document.getElementById("first");
+			xs.innerHTML += s + "&nbsp;" + v2 +"<br/>";
+			sr.value = "";
+		}
+	</script>
+</html>

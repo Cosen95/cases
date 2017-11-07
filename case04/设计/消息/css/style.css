@@ -1,0 +1,239 @@
+*{margin: 0;
+padding: 0;
+box-sizing:border-box;
+font-family: "楷体"}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.first{
+	width: 100%;
+	height: 1rem;
+	background-color: #313131;
+	font-size: .272rem;
+	text-align: center;
+	color: #fff;
+	padding-top: .528rem;
+}
+.second{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.second img{
+	height: .72rem;
+}
+.second div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.second div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.second div span{
+	font-size: .192rem;
+	color: #666;
+}
+.second>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.third{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.third img{
+	height: .72rem;
+}
+.third div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.third div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.third div span{
+	font-size: .192rem;
+	color: #666;
+}
+.third>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.fouth{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.fouth img{
+	height: .72rem;
+}
+.fouth div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.fouth div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.fouth div span{
+	font-size: .192rem;
+	color: #666;
+}
+.fouth>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.fifth{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.fifth img{
+	height: .72rem;
+}
+.fifth div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.fifth div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.fifth div span{
+	font-size: .192rem;
+	color: #666;
+}
+.fifth>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.sixth{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.sixth img{
+	height: .72rem;
+}
+.sixth div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.sixth div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.sixth div span{
+	font-size: .192rem;
+	color: #666;
+}
+.sixth>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.seventh{
+	width: 100%;
+	height: 1rem;
+	padding:0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.seventh img{
+	height: .72rem;
+}
+.seventh div{
+	width: 75%;
+	height: .72rem;
+	padding-top: .05rem;
+}
+.seventh div p{
+	font-size: .24rem;
+	margin-bottom: .1rem;
+}
+.seventh div span{
+	font-size: .192rem;
+	color: #666;
+}
+.seventh>p{
+	height: .72rem;
+	font-size: .192rem;
+	color: #666;
+}
+.none{
+	width: 100%;
+	height: 1.8rem;
+}
+.last{
+	width: 100%;
+	height: .8rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 0;
+	background-color: #000;
+}
+.last ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.last li{
+	width: 25%;
+	height: 100%;
+	font-size: .16rem;
+	color: #fff;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.last li img{
+	width: .256rem;
+}
+.last .on{
+	color: #365f89;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;
+		margin: 0;}
+		.body{
+			width: 100%;
+			height: 733px;
+			background: url(images2/form_bg.jpg) no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+		.form{
+			width: 400px;
+			height: 520px;
+			position: absolute;
+			right: 10%;
+			top: 25%;
+		}
+		.form h3{
+			padding-left: 100px;
+		}
+		.form input{
+			width: 173px;
+		}
+		.form span{
+			display: inline-block;
+			padding-top: 20px;
+		}
+		.form .a1{
+			width: 70px;
+		}
+		.form .a2{
+			width: 90px;
+			height: 30px;
+			color: #fff;
+			font-size: 18px;
+			background-color: #93b518;
+			margin-left: 90px;			
+		}
+		.form .a3{
+			width: 90px;
+			height: 30px;
+			color: #fff;
+			font-size: 18px;
+			background-color: #93b518;
+			margin-left: 60px;			
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<div class="form">
+			<header><h3>学员信息登记表</h3></header>
+			<form action method="post">
+				<span>用户登录名：<input type="email"  value="myemail@163.com" disabled required>(必须填写)</span> <br>
+				<span>&nbsp;真实姓名：<input type="text"  placeholder="例如：王明" autofocus required>(必须填写)</span> <br>
+				<span>&nbsp;真实年龄：<input type="number"  value="24" min="15" max="120" required>(必须填写)</span> <br>
+				<span>&nbsp;出生日期：<input type="date" required>(必须填写)</span> <br>
+				<span>&nbsp;电子邮箱：<input type="email"  placeholder="123456@126.com" required>(必须填写)</span> <br>
+				<span>&nbsp;身份证号：<input type="text" required>（必须填写）</span> <br>
+				<span>&nbsp;手机号码：<input type="tel" required pattern="\d{11}">(必须填写)</span> <br>
+				<span>&nbsp;个人主页：<input list="int" placeholder="http://www.itcast.cn">(选填)</span> <br>
+							<datalist id="int">
+								<option value="http://www.baidu.com"></option>
+								<option value="http://www.taobao.com"></option>
+								<option value="http://www.jindong.com"></option>
+							</datalist>
+				<span>&nbsp;幸运颜色：<input type="color" value="#fed000" class="a1">(请选择你喜欢的颜色)</span> <br>
+				<span><input type="submit" value="提交" class="a2"></span>
+				<span><input type="reset" value="重置" class="a3"></span>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

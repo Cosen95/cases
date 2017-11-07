@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			.header{
+				width: 100%;
+				min-width: 1020px;
+				height: 44px;
+				/*line-height: 44px;*/
+				background-color: #000;
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 20;
+			}
+			.header .container{
+				width: 1020px;
+				height: 44px;
+				margin:0 auto;
+			}
+			.header .header-left{
+				width: 260px;
+				height: 44px;
+				float: left;
+				line-height: 44px;
+				font-size: 14px;
+				color: #AFABA3;
+			}
+			.header .header-left a{
+				font-size: 14px;
+				color: #AFABA3;
+			}
+			.header .header-left span{
+				width: 66px;
+				height: 26px;
+				color:#AFABA3;
+				display: inline-block;
+			
+			}
+			.header .header-right{
+				float: right;
+				width: 456px;
+				height: 44px;
+				line-height: 44px;
+			}
+			.header .header-right input.one{
+				width: 314px;
+				height: 34px;
+				background-color: #000;
+				box-sizing: border-box;
+				border:1px solid #252525;
+				color:#252525;
+			}
+			.header .header-right input.two{
+				width: 52px;
+				height: 34px;
+				margin-left: -10px;
+				background-color: #1D1D1D;
+				background-image: url(img/fangda.png);
+				background-repeat: no-repeat;
+				background-position: center center;
+				box-sizing: border-box;
+				border:1px solid #252525;
+			}
+		
+			
+			.nav{
+				width: 100%;
+				min-width: 1020px;
+				height: 68px;
+				background-color: #1D1D1D;
+				position: fixed;
+				left: 0;
+				top: 44px;
+				z-index: 9;
+			}
+			.nav .container{
+				width: 1020px;
+				height: 68px;
+				margin:0 auto;
+			}
+			.nav img{
+				float: left;
+			
+			}
+			.nav ul{
+				width: 720px;
+				height:68px;
+				float: right;
+				line-height: 68px;
+			}
+			.nav ul li {
+				float: left;
+				width: 96px;
+				text-align: center;
+				height: 68px;
+			}
+			.nav ul li a{
+				color:#AFABA3;
+				font-size: 18px;
+				font-weight: bolder;
+			}
+			.nav ul li:hover a{
+				color:#DFD5A0;
+				
+			}
+			.nav ul li:hover{
+				background-color: #000;
+			}
+			.nav .active{
+				color:#f30;
+			}
+			.banner{
+				width: 100%;
+				min-width: 1280px;
+				height: 530px;
+				background-color: #fff;
+				margin-top: 44px;
+				position: relative;
+				/*z-index:-99;*/
+			}
+			.banner .slider,.banner .slider img{
+				width: 100%;
+				height:530px;
+			}
+			.banner .slider{
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: opacity 0.6s ease; 
+			}
+			.banner .pagers{
+				position: absolute;
+				bottom: 50px;
+				right: 50px;
+			}
+			.banner .pager{
+				padding:5px 10px;
+				color:#333;
+				background-color: goldenrod;
+			}
+			.banner .pager.active{
+				color:#f30;
+				background-color: brown;
+			}
+			.banner-left{
+				position: absolute;
+				left: 0;
+				top: 30px;
+				background-color: rgba(33,25,18,0.8);
+				width: 35px;
+				height: 500px;
+				z-index: 6;
+			}
+			.banner-right{
+				position: absolute;
+				right: 0;
+				top: 30px;
+				background-color: rgba(33,25,18,0.8);
+				width: 35px;
+				height: 500px;
+				z-index: 6;
+			}
+			.mask{
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(29,29,29,0.8);
+				z-index: 8;
+				display: none;
+			}
+			.warn{
+				width: 520px;
+				height: 382px;
+				position: fixed;
+				background-color: orangered;
+				left: 50%;
+				top:50%;
+				margin-left: -260px;
+				margin-top: -191px;
+				z-index:9;
+				display: none;
+				text-align: center;
+			}
+			.warn .top{
+				width: 520px;
+				height: 42px;
+				background-color: #1D1D1D;
+				line-height: 42px;
+			}
+			.warn .top h3{
+				color: #BBB5AA;
+			}
+			.warn .top .time{
+				cursor: pointer;
+				float: right;
+			}
+			.warn .bottom{
+				width: 520px;
+				height: 340px;
+				background-color: #C9C3B8;
+				text-align: center;
+				color: #8A3D2D;
+				
+			}
+			.warn .bottom input{
+				background-color: #E4D9C8;
+			}
+			.warn .bottom span{
+				color: #353535;
+				font-size: 14px;
+			}
+			.warn .bottom input:nth-of-type(1){
+				width: 242px;
+				height: 26px;
+				margin-top: 50px;
+				margin-bottom: 20px;
+			}
+			.warn .bottom input:nth-of-type(2){
+				width: 242px;
+				height: 26px;
+				/*margin-top: 20px;*/
+				margin-bottom: 20px;
+			}
+			.warn .bottom input:nth-of-type(3){
+				width: 124px;
+				height: 26px;
+				margin-bottom: 20px;
+			}
+			.warn .bottom input:nth-of-type(4){
+				background-color: #353535;
+				border: none;
+				width: 92px;
+				height: 32px;
+				color:#fff;
+				margin-bottom: 20px;
+			}
+			.warn .bottom a{
+				color:#8A3D2D;
+			}
+			.warn .bottom img{
+				width: 62px;
+				height: 26px;
+				margin-left: 5px;
+			}
+			.book{
+				width: 100%;
+				min-width: 1280px;
+				height: 482px;
+				background-image: url(img/bannerK.jpg);
+				background-size: cover;
+			}
+			.book .container{
+				width: 1280px;
+				height: 482px;
+				margin:0 auto;
+			}
+			.book .book-left{
+				width: 636px;
+				height: 482px;
+				float: left;
+			}
+			.book .book-left img.one{
+				width: 636px;
+				height: 482px;
+			}
+			.book .book-left:hover img.one{
+				display: none;
+			}
+			.book .book-left:hover img.two{
+				display: block;
+			}
+			.book .book-left img.two{
+				width: 636px;
+				height: 482px;
+				display: none;
+			}
+			.book .book-right{
+				width: 644px;
+				height: 482px;
+				float: right;
+			}
+			.book .book-right .top{
+				width: 644px;
+				height: 160px;
+				background-color: #E6DFD5;
+			}
+			.book .book-right .top img{
+				margin-top: 60px;
+				margin-left: 140px;
+			}
+			.book .book-right .tab{
+				width: 644px;
+				height: 322px;
+				background-color: #BF7C4F;
+				position: relative;
+			}
+			
+			
+			.book .book-right .tab ul{
+				position: absolute;
+				bottom: 10px;
+				right: 46px;
+			}
+			.book .book-right .tab .tab-title{
+				width: 26px;
+				height: 10px;
+				background-color: #E0A677;
+				float: left;
+				margin-right: 5px;
+				
+				
+			}
+			.book .book-right .tab .tab-title.active{
+				background-color: #FCEBDD;
+			}
+			.book .book-right .tab .tab-content {
+				width: 520px;
+				height: 326px;
+				border:1px solid #FF3300;
+				display: none;
+				position: absolute;
+				left: 60px;
+				top: -50px;		
+				background-color: #E5DFD5;		
+			}
+			.book .book-right .tab .tab-content img{
+				width: 500px;
+				height: 306px;
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+			.book .book-right .tab .tab-content.active{
+				display: block;
+			}
+			.content{
+				width: 100%;
+				height:2000px;
+				background-image:url(img/bodybanner_02.jpg);
+				background-size: cover;
+			}
+			.culture{
+				width: 100%;
+				min-width: 1020px;
+				height: 700px;
+				
+			}
+			.culture .container{
+				width: 1020px;
+				height: 700px;
+				margin:0 auto;
+			}
+			.culture .culture-left{
+				width: 720px;
+				height: 560px;
+				float: left;
+				margin-top: 30px;
+			}
+			.culture .culture-left .tab1{
+				width: 680px;
+				height: 500px;
+				box-sizing: border-box;
+				margin-top: 30px;
+			}
+			.culture .culture-left .tab1 ul{
+				float: left;
+			}
+			.culture .culture-left .tab-title1{
+				width: 125px;
+				height: 125px;
+				/*line-height: 125px;*/
+				border:1px solid #f0f0f0;
+			}
+			.culture .culture-left .tab-title1 img{
+				width: 125px;
+				height: 125px;
+				border: none;
+			}
+			.culture .culture-left .tab-title1 img.one{
+				display: block;
+			}
+			.culture .culture-left .tab-title1 img.two{
+				display: none;
+			}
+			.culture .culture-left .tab-title1:hover img.one{
+				display: none;
+			}
+			.culture .culture-left .tab-title1:hover img.two{
+				display: block;
+			}
+			
+			
+			.culture .culture-left .tab-content1{
+				margin-left: 126px;
+				width: 560px;
+				height: 506px;
+				border:1px solid #f0f0f0;
+				display: none;
+				background-color: #E6E2DF;
+				/*float: right;*/
+			}
+			.culture .culture-left .tab-content1.active{
+				display: block;
+			}
+
+			.culture .culture-right{
+				width: 290px;
+				height: 560px;
+				float: right;
+				margin-top: 40px;
+			}
+			.culture .culture-right .bottom{
+		        background-color: #DFDBDA;
+				width: 290px;
+				height: 506px;
+				margin-top: 20px;
+				
+			}
+			.culture .culture-right .bottom li{
+				width: 240px;
+				height: 72px;
+				padding-left: 25px;
+				padding-bottom: 15px;
+				padding-top: 15px;
+			}
+			.culture .culture-right .bottom li img{
+				width: 240px;
+				height: 72px;
+				
+				
+			}
+			.share{
+				width: 100%;
+				height: 600px;
+				min-width: 1020px;
+				
+			}
+			.share .container{
+				width: 1020px;
+				height: 600px;
+				margin:0 auto;
+			}
+			.share .share-left{
+				width: 720px;
+				height: 560px;
+				float: left;
+				margin-top: 20px;
+			}
+			.share .share-left .bottom{
+				margin-top: 20px;
+				width: 710px;
+				height: 500px;
+				background-color: #DEDBDB;
+			}
+			.share .share-right{
+				width: 286px;
+				height: 560px;
+				float: right;
+				margin-top: 20px;
+			}
+			.share .share-right .bottom{
+				width: 286px;
+				height: 500px;
+				margin-top: 20px;
+				background-color: #E4DEDD;
+			}
+			.share .share-right .bottom img.two{
+				width: 286px;
+				height: 90px;
+								
+			}
+			
+			.tj{
+				width: 100%;
+				height: 700px;
+				min-width: 1020px;
+				/*background-color: royalblue;*/
+			}
+			.tj .container{
+				width: 1020px;
+				height: 700px;
+				margin:0 auto;
+			}
+			.tj .container img.top{
+				margin-top: 20px;
+			}
+			.tj .bottom{
+				width: 1020px;
+				height: 580px;
+				margin-top: 20px;
+				/*background-color: goldenrod;*/
+			}
+			.tj .bottom ul li{
+				width: 492px;
+				height: 276px;
+				float: left;
+				margin-left: 10px;
+				margin-top: 10px;
+				background-color: brown;
+			}
+			.tj .bottom ul li .left{
+				width: 164px;
+				height: 276px;
+				float: left;
+				/*background-color: olivedrab;*/
+			}
+			.tj .bottom ul li .left .left1{
+				width: 164px;
+				height: 196px;
+			}
+			.tj .bottom ul li .left .left1 img{
+				width: 164px;
+				height: 196px;
+			}
+			.tj .bottom ul li .left .left2{
+				width: 164px;
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+				background-color: #C67351;
+				position: relative;
+				overflow: hidden;
+			}
+			.tj .bottom ul li .left .left2 p{
+				color: #EEEEEE;
+				font-size: 20px;
+				font-weight: bolder;
+			}
+			.tj .bottom ul li .left .left2 .play{
+				position: absolute;
+				left: 164px;
+				top: 0;
+				width: 164px;
+				height: 80px;
+				transition: all 0.5s ease;
+				
+			}
+			.tj .bottom ul li .left .left2:hover .play{
+				transform: translateX(-164px);
+			}
+			.tj .bottom ul li .left .left2 .play img{
+				width: 164px;
+				height: 80px;
+			}
+			.tj .bottom ul li .right{
+				width: 328px;
+				height: 276px;
+				float: right;
+				background-color: #E8E3E0;
+			}
+			.footer{
+				width: 100%;
+				height: 85px;
+				background-color: #000;
+			}
+			.footer .container{
+				width: 1020px;
+				height: 85px;
+				
+				margin:0 auto;
+				text-align: center;
+			}
+			.footer .container p{
+				font-size: 14px;
+				color:#666;
+				padding-top: 30px;
+				line-height: 20px;
+			
+			}
+			.toTop{
+				height: 86px;
+				width: 86px;
+				position: fixed;
+				right: 0;
+				bottom: 100px;
+				display: none;
+
+			}
+			.toTop img{
+				height: 86px;
+				width: 86px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toTop"><img src="img/top_03.jpg"></div>
+		<div class="mask"></div>
+		<div class="warn">
+			<div class="top">
+				<h3><span>欢迎登录</span><span class="time">&times;</span></h3>
+
+			</div>
+			<div class="bottom">
+				<form>
+				用户名:<input type="text" value="流年" /><br/>
+				登录密码:<input type="password" /><br/>
+				验证码:<input type="text" /><img src="img/uu_03.jpg" /><span>换一换</span><br/>
+				<input type="button" value="登录" /><br/>
+				<a href="#">找回账号</a>&nbsp;|&nbsp;
+				<a href="#">忘记密码</a>&nbsp;|&nbsp;
+				<a href="#">立即登录</a>
+				
+				</form>
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="container">
+				<div class="header-left">
+					<span>Hi,游客</span>
+						<a href="#">我的空间</a> |
+						<a href="#">退出</a>
+						<a href="#" class="bound">登录</a>
+						<a href="#">注册</a>
+				</div>
+				<div class="header-right">
+					<input type="text" class="one" value="查找你感兴趣的内容"/>
+					<input type="search" class="two" />
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="container">
+				<img src="img/logo.png" />
+				<ul>
+					<li>
+						<a href="#f1" class="active">网上书房</a>
+					</li>
+					<li>
+						<a href="#f1">数字展馆</a>
+					</li>
+					<li>
+						<a href="#f2">文化预告</a>
+					</li>
+					<li>
+						<a href="#f2">文化热点</a>
+					</li>
+					<li>
+						<a href="#f3">我要分享</a>
+					</li>
+					<li>
+						<a href="#f3">我要预约</a>
+					</li>
+					<li>
+						<a href="#f4">我要推荐</a>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-left"></div>
+			<div class="banner-right"></div>
+			
+				
+				<div class="bannerWrap">
+					<div class="slider">
+						<img src="img/banner.jpg">
+					</div>
+					<div class="slider">
+						<img src="img/banner_01.jpg">
+					</div>
+					<div class="slider">
+						<img src="img/banner_02.jpg">
+					</div>
+				</div>
+				<div class="pagers">
+					<span class="pager active">1</span>
+					<span class="pager">2</span>
+					<span class="pager">3</span>
+				</div>
+			
+		</div>
+		<div class="book" id="f1">
+			<div class="container">
+				<div class="book-left">
+					<img src="img/img1.jpg" class="one" />
+					<img src="img/jj.jpg" class="two" />
+				</div>
+				<div class="book-right">
+					<div class="top">
+						<img src="img/shuzi.png" />
+					</div>
+					<div class="tab">
+						<ul>
+							<li class="tab-title active"></li>
+							<li class="tab-title"></li>
+							<li class="tab-title"></li>
+							<li class="tab-title"></li>
+						</ul>
+						<div class="tab-content active"><img src="img/Hall2.jpg"></div>
+						<div class="tab-content"><img src="img/Hall5.jpg"></div>
+						<div class="tab-content"><img src="img/Hall7.jpg"></div>
+						<div class="tab-content"><img src="img/Hall6.jpg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+		<div class="culture" id="f2">
+			<div class="container">
+			<div class="culture-left">
+				<img src="img/tt.png" />
+				<div class="tab1">
+			<ul>
+				<li class="tab-title1 active"><img src="img/bb1.jpg" class="one" /><img src="img/l1.jpg" class="two"/></li>
+				<li class="tab-title1"><img src="img/bb2.jpg" class="one" /><img src="img/l2.jpg" class="two" /></li>
+				<li class="tab-title1"><img src="img/bb3.jpg" class="one" /><img src="img/l3.jpg" class="two" /></li>
+				<li class="tab-title1"><img src="img/bb4.jpg" class="one" /><img src="img/l4.jpg" class="two" /></li>
+			</ul>
+			<div class="tab-content1 active">tab-content1</div>
+			<div class="tab-content1">tab-content2</div>
+			<div class="tab-content1">tab-content3</div>
+			<div class="tab-content1">tab-content4</div>
+		</div>
+
+			</div>
+			<div class="culture-right">
+				<img src="img/tt2.png" />
+				<div class="bottom">
+					<ul>
+						<li><img src="img/img1_03.jpg"></li>
+						<li><img src="img/img2_06.jpg"></li>
+						<li><img src="img/img3_08.jpg"></li>
+						<li><img src="img/img2_06.jpg"></li>
+						<li><img src="img/img1_03.jpg"></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="share" id="f3">
+			<div class="container">
+				<div class="share-left">
+					<img src="img/tt3.png" />
+					<div class="bottom"></div>
+				</div>
+				<div class="share-right">
+					<img src="img/tt4.png" class="one">
+					<div class="bottom">
+						<img src="img/z1_07.jpg" class="two">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tj" id="f4">
+			<div class="container">
+				<img src="img/tt4.png" class="top"/>
+				<div class="bottom">
+					<ul>
+						<li>
+							<div class="left">
+								<div class="left1"><img src="img/kk1_03.jpg" /></div>
+								<div class="left2">
+									<p>精彩演出</p>
+									<div class="play"><img src="img/ba_03.png"></div>
+								</div>
+							</div>
+							<div class="right"></div>
+						</li>
+						<li>
+							<div class="left">
+								<div class="left1"><img src="img/to1.jpg" /></div>
+								<div class="left2">
+									<p>精品讲座</p>
+									<div class="play"><img src="img/ba_03.png"></div>
+								</div>
+							</div>
+							<div class="right"></div>
+						</li>
+						<li>
+							<div class="left">
+								<div class="left1"><img src="img/to2.jpg" /></div>
+								<div class="left2">
+									<p>特色展览</p>
+									<div class="play"><img src="img/ba_03.png"></div>
+								</div>
+							</div>
+							<div class="right"></div>
+						</li>
+						<li>
+							<div class="left">
+								<div class="left1"><img src="img/to3.jpg" /></div>
+								<div class="left2">
+									<p>记录嘉定</p>
+									<div class="play"><img src="img/ba_03.png"></div>
+								</div>
+							</div>
+							<div class="right"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<p>上海市嘉定区文化广播影视管理局 版权所有 ICP备案号：沪ICP备13001862 访问量： 23226次<br/>
+为达到最佳浏览效果，请使用ie8以上版本ie浏览器或360安全浏览器5.0以上版本</p>
+			</div>
+		</div>
+		<script>
+			var banners = document.getElementsByClassName("banner")[0];
+			var sliders = banners.getElementsByClassName("slider");
+			var pagers = banners.getElementsByClassName("pager");
+			var index = 0;
+			var interId = null;
+			for(var i=0;i<sliders.length;i++) {
+				sliders[i].style.opacity = 0;
+			}
+			sliders[index].style.opacity = 1;
+			function goSlider(num) {
+				sliders[index].style.opacity = 0;
+				sliders[num].style.opacity = 1;
+				pagers[index].className = "pager";
+				pagers[num].className = "pager active";
+//				sliders.style.top = num
+				index = num;
+				
+			}
+			function auto() {
+				interId = setInterval(function() {
+					var n = index;
+					n++;
+					if(n>=sliders.length) {
+						n=0;
+					}
+					goSlider(n)
+				},2000)
+			}
+			
+			banners.onmouseover = function() {
+				clearInterval(interId);
+			}
+			banners.onmouseout = function() {
+				auto();
+			}
+			auto();
+			
+			for(var i=0;i<pagers.length;i++) {
+				!function(i) {
+					var j = i;
+					pagers[j].onclick = function() {
+						goSlider(j);
+					}
+				}(i)
+			}
+
+
+
+			var mask = document.getElementsByClassName("mask")[0];
+			var warns = document.getElementsByClassName("warn");
+			var times = document.getElementsByClassName("time");
+			var bounds = document.getElementsByClassName("bound");
+			for(var i=0;i<bounds.length;i++) {
+				!function(i) {
+					var j = i;
+					bounds[j].onclick = function() {
+						mask.style.display = "block";
+						warns[j].style.display = "block";
+					}
+				}(i)
+			}
+			for(var i=0;i<times.length;i++) {
+				!function(i) {
+					var j = i;
+					times[j].onclick = function() {
+						mask.style.display = "none";
+						warns[j].style.display = "none";
+					}
+				}(i)
+			}
+
+
+			
+			var tab = document.getElementsByClassName("tab")[0];
+			var titles = tab.getElementsByClassName("tab-title");
+			var contents = tab.getElementsByClassName("tab-content");
+			var activeNum = 0;
+			for(var i=0;i<titles.length;i++) {
+				!function(j) {
+					titles[j].onclick = function() {
+						contents[activeNum].style.display = "none";
+						titles[activeNum].className = "tab-title";
+						contents[j].style.display = "block";
+						titles[j].className = "tab-title active";
+						activeNum = j;
+					}
+				}(i)
+			}
+			
+			
+			
+			var tab1 = document.getElementsByClassName("tab1")[0];
+			var titles1 = tab1.getElementsByClassName("tab-title1");
+			var contents1 = tab1.getElementsByClassName("tab-content1");
+			var activeNum1 = 0;
+			for(var i=0;i<titles1.length;i++) {
+				!function(j) {
+					titles1[j].onclick = function() {
+						contents1[activeNum1].style.display = "none";
+						titles1[activeNum1].className = "tab-title1";
+						contents1[j].style.display = "block";
+						titles1[j].className = "tab-title1 active";
+						activeNum1 = j;
+					}
+				}(i)
+			}
+
+
+
+
+			var nav = document.getElementsByClassName("nav")[0];
+			var links = nav.getElementsByTagName("a");
+			var activeLink = links[0];
+			for(var i=0;i<links.length;i++) {
+				links[i].onclick = function() {
+					var id = this.getAttribute("href");
+					id = id.substring(1);
+					var section = document.getElementById(id);
+					var seTop = section.offsetTop;
+					var that = this;
+					animation(seTop,null);
+					activeLink.className="";
+					this.className="active";
+					activeLink=this;
+
+				}
+			}
+			
+			function animation(dis,fn) {
+				var st = document.body.scrollTop;//现在的位置
+				var d =(dis-st-100)/100; 
+				 for(var i=0;i<100;i++){
+			  		!function(i){			  		
+			  			var j=i;			  		
+			  			setTimeout(function(){			  			
+			  				var t= st+d*(j+1);
+			  				window.scrollTo(0,t);
+			  				if(j==99){
+			  					fn();
+			  				}
+			  			},j*10)
+			  		}(i)
+			  	
+			  	}
+
+
+			}
+			
+			
+			
+			var interId1 = null;
+			function play() {
+				interId1 = setInterval(function() {
+					var oldTop = document.body.scrollTop;
+					if(oldTop<=0) {
+						clearInterval(interId1);
+					} else {
+						document.body.scrollTop = oldTop - 50;
+					}
+				},20)
+			}
+			var toTop = document.getElementsByClassName("toTop")[0];
+			toTop.onclick = function() {
+				play();
+			}
+			window.onscroll = function() {
+				var wH = window.innerHeight;
+				var t = document.body.scrollTop;
+				if(t>wH) {
+					toTop.style.display = "block";
+				} else {
+					toTop.style.display = "none";
+				}
+			}
+
+
+		</script>
+	</body>
+</html>

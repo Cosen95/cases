@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular-1.5.8.min.js"></script>
+</head>
+<body ng-controller="myCon">
+    <div ng-include="tempUrl"></div>
+</body>
+<script>
+    angular.module("myApp",[])
+        .controller("myCon",["$scope",function($s){
+            $s.tempUrl = "demo01.html";
+        }])
+</script>
+</html>

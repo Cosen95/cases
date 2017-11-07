@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .changeF{
+            color:red;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/angular-1.5.8.min.js"></script>
+    <script src="js/car.js"></script>
+</head>
+<body ng-controller="myCon">
+<div class="container">
+<table class="table table-bordered text-center table-hover">
+    <tr>
+        <td colspan="2">
+            <input type="text" class="form-control" ng-model="search.$" placeholder="请输入你需要搜索的内容">
+        </td>
+        <td colspan="2">
+            <input type="text" class="form-control" ng-model="search.id" placeholder="请输入你需要搜索的ID">
+        </td>
+        <td colspan="2">
+            <input type="text" class="form-control" ng-model="search.name" placeholder="请输入你需要搜索的书名">
+        </td>
+    </tr>
+    <tr>
+        <td ng-class="{true:'dropup changeF',false:'dropdown'}[myClass1]" ng-click="order('id',reverse);reverse=!reverse;myClass1 = !myClass1">书籍编号
+            <span class="caret"></span>
+        </td>
+        <td ng-class="{true:'dropup changeF',false:'dropdown'}[myClass2]" ng-click="order('name',reverse);reverse=!reverse;myClass2 = !myClass2">书籍名字
+            <span class="caret"></td>
+        <td ng-class="{true:'dropup changeF',false:'dropdown'}[myClass3]" ng-click="order('price',reverse);reverse=!reverse;myClass3 = !myClass3;">书籍单价
+            <span class="caret">
+        </td>
+        <td ng-class="{true:'dropup changeF',false:'dropdown'}[myClass4]" ng-click="order('num',reverse);reverse=!reverse;myClass4 = !myClass4;">书籍数量
+            <span class="caret">
+        </td>
+        <td>书籍总价</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="book in books | filter : search track by $index">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.price}}</td>
+        <td>
+            <button class="btn btn-primary" ng-click="sub(book.id)">-</button>
+                <input type="number" ng-model="book.num">
+            <button class="btn btn-primary" ng-click="add(book.id)">+</button>
+        </td>
+        <td>{{book.price * book.num}}</td>
+        <td><button class="btn btn-danger" ng-click="del(book.id)">删除</button></td>
+    </tr>
+    <tr>
+        <td>购买总数量</td>
+        <td>{{allNum()}}</td>
+        <td>购买总价格</td>
+        <td>{{allPrice()}}</td>
+        <td><button class="btn btn-info" ng-click="show()">增加新书</button></td>
+        <td><button class="btn btn-danger" ng-click="delAll()">全部删除</button></td>
+    </tr>
+</table>
+</div>
+<div class="container" ng-show="myShow" ng-style="tempStyle">
+    <table class="table  text-center">
+        <tr>
+            <td>书籍编号</td>
+            <td><input type="text" ng-style="tdStyle" ng-model="newid"></td>
+        </tr>
+        <tr>
+            <td>书籍名字</td>
+            <td><input type="text" ng-style="tdStyle" ng-model="newname"/></td>
+        </tr>
+        <tr>
+            <td>书籍单价</td>
+            <td><input type="text" ng-style="tdStyle" ng-model="newprice"/></td>
+        </tr>
+        <tr>
+            <td>数量</td>
+            <td><input type="text" ng-style="tdStyle" ng-model="newnum"/></td>
+        </tr>
+    </table>
+    <button class="btn btn-danger" ng-click="addCar()">加入购物车</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" href="css/media-100.css">
+	<style>
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       ul{
+       	list-style: none;
+       }
+       a{
+       	text-decoration: none;
+       }
+       .header{
+       	width: 100%;
+       	height: 0.64rem;
+       	background-color: #f05b1a;
+       }
+       .header .container{
+       	width: 5.56rem;
+       	height: 0.64rem;
+       	line-height: 0.64rem;
+       	margin:0 auto;
+       	text-align: center;
+       	font-size: 0;
+       }
+       .tab{
+       	width: 100%;
+       	height: 0.72rem;
+       	background-color: #f2733c;
+       }
+       .tab .container{
+       	width: 5.56rem;
+       	height: 0.72rem;
+       	margin: 0 auto;
+       }
+       .tab .container ul{
+       	width: 5.56rem;
+       	height: 0.48rem;
+              font-size: 0;
+              padding-top: 0.16rem;
+        
+       }
+       .tab .container li{
+       	box-sizing:border-box;
+       	text-align: center;
+       	float: left;
+       	width: 25%;
+       	height: 0.48rem;
+       	line-height: 0.48rem;
+       	font-size: 0.224rem;
+       	border: 0.02rem solid #fff;
+
+       }
+       .tab .container li:nth-child(1){
+       	border-radius: 0.1rem 0 0 0.1rem;
+       }
+       .tab .container li:nth-child(4){
+       	border-radius: 0 0.1rem 0.1rem 0;
+       }
+       .tab .container li a{
+       	color:#fff;
+       }
+       .tab .container li.now{
+       	background-color: #fff;
+       }
+       .tab .container li.now a{
+       	color:#f05b1a;
+       }
+       .add{
+              width: 100%;
+              height: 1.04rem;
+              background-color: #eff0f4;
+       }
+       .add .container{
+              width: 5.56rem;
+              height: 1.04rem;
+              margin:0 auto;
+              font-size: 0;
+              padding-top: 0.16rem;
+       }
+       .add .container .add-left{
+              width: 0.512rem;
+              height: 0.64rem;
+              float: left;
+      
+       }
+       .add .container .add-left img{
+              width: 0.384rem;
+       }
+       .add .container .add-right{
+              width: 4.8rem;
+              height: 0.896rem;
+              background-image: url(images4/bg01.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              float: right;
+              padding-left: 0.16rem;
+       }
+       .add .container .add-right span.two{
+              width: 2.56rem;
+              height: 0.352rem;
+              color: #575757;
+              font-size:0.192rem;
+       }
+       .list1{
+              width: 100%;
+              height: 0.864rem;
+              background-color: #eff0f4;
+       }
+       .list1 .container{
+              width: 5.56rem;
+              height: 0.864rem;
+              margin: 0 auto;
+              font-size: 0;
+       }
+       .list1 .container img{
+              width: 0.224rem;
+             
+       }
+       .list1 .container span.one{
+              display: inline-block;
+              margin-left: 0.5rem;
+              margin-top: -0.7rem;
+              width: 3.12rem;
+              height: 0.256rem;
+              color: #737373;
+              font-size:0.192rem;
+       }
+       .list1 .container span.two{
+              display: inline-block;
+              margin-top: 0.28rem;
+              width: 3.12rem;
+              height: 0.256rem;
+              color: #999;
+              font-size:0.192rem;
+       }
+       .list2{
+              width: 100%;
+              height: 4.32rem;
+       }
+       .list2 .container{
+              width: 5.56rem;
+              height: 4.32rem;
+              margin:0 auto;
+       }
+       .list2 .container table{
+              width: 5.56rem;
+              height: 4.32rem;
+       }
+       .list2 .container table tr:nth-child(odd){
+             width: 5.56rem;
+             height: 1rem;
+             background-color: #fff;
+       }
+       .list2 .container table tr:nth-child(odd) td{
+             width: 5.56rem;
+             height: 1rem;
+             background-color: #fff;
+       }
+       .list2 .container table tr:nth-child(even){
+             width: 5.56rem;
+             height: 0.44rem;
+             background-color: #eff0f4;
+       }
+       .list2 .container table tr:nth-child(even) td{
+             width: 5.56rem;
+             height: 0.44rem;
+             background-color: #eff0f4;
+       }
+       .list2 .container table tr:nth-child(1) td{
+        
+             display: flex;
+             justify-content:space-between;
+             align-items:center;
+       }
+       .list2 .container table tr:nth-child(2) td{
+              color: #c4c5c7;
+              font-size: 0.192rem;
+
+       }
+       .list2 .container table tr:nth-child(3) td{
+              position: relative;
+       }
+       .list2 .container table tr:nth-child(3) td .left{
+              width: 0.512rem;
+              height: 0.608rem;
+              float: left;
+              font-size: 0;
+       }
+       .list2 .container table tr:nth-child(3) td .left img{
+              width: 0.352rem;
+              
+       }
+       .list2 .container table tr:nth-child(3) td .center{
+              width: 2.704rem;
+              height: 0.784rem;
+              font-size: 0;
+       }
+       .list2 .container table tr:nth-child(3) td .center span.one{
+              
+              color: #ef5b19;
+              font-size:0.224rem;
+       }
+       .list2 .container table tr:nth-child(3) td .center span.two{
+
+              
+              color: #4d4d4d;
+              font-size:0.192rem;
+       }
+       .list2 .container table tr:nth-child(3) td .right{
+              position: absolute;
+              right: 0;
+              top: 0.24rem;
+              width: 1.296rem;
+              height: 0.832rem;
+              
+              font-size: 0;
+             
+       }
+       .list2 .container table tr:nth-child(3) td .right img{
+              width: 1.144rem;
+              
+       }
+       .list2 .container table tr:nth-child(4) td{
+              color: #c4c5c7;
+              font-size: 0.192rem;
+
+       }
+       .list2 .container table tr:nth-child(5) td{
+              position: relative;
+       }
+       .list2 .container table tr:nth-child(5) td .left{
+              width: 0.512rem;
+              height: 0.608rem;
+              float: left;
+              font-size: 0;
+       }
+       .list2 .container table tr:nth-child(5) td .left img{
+              width: 0.352rem;
+              
+       }
+       .list2 .container table tr:nth-child(5) td .center{
+              width: 2.704rem;
+              height: 0.784rem;
+              font-size: 0;
+       }
+       .list2 .container table tr:nth-child(5) td .center span.one{
+              
+              color: #ef5b19;
+              font-size:0.224rem;
+       }
+       .list2 .container table tr:nth-child(5) td .center span.two{
+
+              
+              color: #4d4d4d;
+              font-size:0.192rem;
+       }
+       .list2 .container table tr:nth-child(5) td .right{
+              position: absolute;
+              right: 0;
+              top: 0.24rem;
+              width: 1.296rem;
+              height: 0.832rem;
+              
+              font-size: 0;
+             
+       }
+       .list2 .container table tr:nth-child(5) td .right img{
+              width: 1.144rem;
+              
+       }
+       .list2 .container table tr:nth-child(6) td{
+              color: #c4c5c7;
+              font-size: 0.192rem;
+
+       }
+       .list3{
+              width: 100%;
+              height: 1rem;
+              background-color: #fff;
+
+       }
+       .list3 .container{
+              width: 5.56rem;
+              height: 1rem;
+              position: relative;
+              margin:0 auto;
+       }
+       .list3 .left{
+              width: 0.512rem;
+              height: 0.608rem;
+              float: left;
+              font-size: 0;
+            
+       }
+       .list3 .container .left img{
+              width: 0.352rem;
+              
+       }
+       .list3 .container .center{
+              width: 2.704rem;
+              height: 0.784rem;
+              font-size: 0;
+              margin-top: 0.16rem;
+            
+       }
+       .list3 .container .center span.one{
+              
+              color: #ef5b19;
+              font-size:0.224rem;
+       }
+       .list3 .container .center span.two{
+
+              
+              color: #4d4d4d;
+              font-size:0.192rem;
+       }
+       .list3 .container .right{
+              position: absolute;
+              right: 0;
+              top: 0.24rem;
+              width: 1.296rem;
+              height: 0.832rem;
+              
+              font-size: 0;
+             
+       }
+       .list3 .container .right img{
+              width: 1.144rem;
+              
+       }
+       .list4{
+              width: 100%;
+              height: 1rem;
+              background-color: #fff;
+
+       }
+       .list4 .container{
+              width: 5.56rem;
+              height: 1rem;
+              position: relative;
+              margin:0 auto;
+       }
+       .list4 .left{
+              width: 0.512rem;
+              height: 0.608rem;
+              float: left;
+              font-size: 0;
+       }
+       .list4 .container .left img{
+              width: 0.352rem;
+              
+       }
+       .list4 .container .center{
+              width: 2.704rem;
+              height: 0.784rem;
+              font-size: 0;
+              margin-top: 0.16rem;
+       }
+       .list4 .container .center span.one{
+              
+              color: #ef5b19;
+              font-size:0.224rem;
+       }
+       .list4 .container .center span.two{
+
+              
+              color: #4d4d4d;
+              font-size:0.192rem;
+       }
+       .list4 .container .right{
+              position: absolute;
+              right: 0;
+              top: 0.24rem;
+              width: 1.296rem;
+              height: 0.832rem;
+              
+              font-size: 0;
+             
+       }
+       .list4 .container .right img{
+              width: 1.144rem;
+              
+       }
+       .footer{
+              position: fixed;
+              left: 0;
+              bottom:0;
+              width: 100%;
+              height: 0.8rem;
+              background-color: #fff;
+              border-top: 0.024rem solid #e4e2e1;
+       }
+       .footer .container{
+              width: 5.52rem;
+              height: 0.784rem;
+              margin: 0 auto;
+              padding-top: 0.16rem;
+       }
+       .footer .container ul{
+        width: 5.52rem;
+              height: 0.784rem;
+              text-align: center;
+        font-size: 0;
+       }
+       .footer .container ul li{
+              float: left;
+              width: 25%;
+              height: 0.784rem;
+       }
+
+       .footer .container span{
+              width :0.736rem;
+              height: 0.32rem;
+              font-size: 0.128rem;
+       }
+       .footer .container span.one{
+              color: #f16528;
+       
+       }
+       .footer .container span.two{
+              color: #9f9f9f;
+       
+       }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<img src="images4/wenzi01.png">
+		</div>
+	</div>
+	<div class="tab">
+		<div class="container">
+			<ul>
+				<li class="now"><a href="#">全部</a></li>
+				<li><a href="#">未评级</a></li>
+				<li><a href="#">喜欢</a></li>
+				<li><a href="#">提示</a></li>
+			</ul>
+		</div>
+	</div>
+       <div class="add">
+              <div class="container">
+                     <div class="add-left"><img src="images4/f.png"></div>
+                     <div class="add-right">
+                            <span class="two">添加兴趣，以获得更个性化的建议</span>
+                     </div>
+              </div>
+       </div>
+       <div class="list1">
+              <div class="container">
+                     <img src="images4/clock.png">
+                     <span class="one">这里的历史记录只有你自己可见。</span>
+                     <span class="two">2015-05-08 星期五</span>
+              </div>
+       </div>
+       <div class="list2">
+              <div class="container">
+                     <table border="0" cellspacing="0">
+                            <tr>
+                                   <td>
+                                      <img src="images4/pic04.png">
+                                      <img src="images4/pic02.png">
+                                      <img src="images4/pic01.png">
+                                      <img src="images4/pic03.png">
+                                   </td>
+                            </tr>
+                            <tr>
+                                   <td>2015-05-06 星期三</td>
+                            </tr>
+                            <tr>
+                                   <td>
+                                       <div class="left"><img src="images4/dog.png"></div>
+                                       <div class="center">
+                                              <span class="one">K9 娱乐中心俱乐部</span><br/>
+                                              <span class="two">小狗 跑步·桑尼尼斯</span>
+                                       </div> 
+                                       <div class="right"><img src="images4/star.png"></div>  
+                                   </td>
+                            </tr>
+                            <tr>
+                                   <td>2015-05-05 星期二</td>
+                            </tr>
+                            <tr>
+                                   <td>
+                                   <div class="left"><img src="images4/hat.png"></div>
+                                       <div class="center">
+                                              <span class="one">德尔玛嘉年华</span><br/>
+                                              <span class="two">墨西哥人·mott</span>
+                                       </div> 
+                                       <div class="right"><img src="images4/star.png"></div>  
+                                   </td>
+                            </tr>
+                            <tr>
+                                   <td>2015-05-04 星期一</td>
+                            </tr>
+                     </table>
+              </div>
+       </div>
+       <div class="list3">
+              <div class="container">
+              <div class="left"><img src="images4/rice.png"></div>
+                      <div class="center">
+                                          <span class="one">朋友家</span><br/>
+                                          <span class="two">中国人·卡迪夫</span>
+                                       </div> 
+                                       <div class="right"><img src="images4/star.png"></div>  
+              </div>
+       </div>
+       <div class="list4">
+              <div class="container">
+              <div class="left"><img src="images4/park.png"></div>
+                      <div class="center">
+                                          <span class="one">竹山公园</span><br/>
+                                          <span class="two">公园·安东尼</span>
+                                       </div> 
+                                       <div class="right"><img src="images4/star.png"></div>  
+              </div>
+       </div>
+       <div class="footer">
+              <div class="container">
+                     <ul>
+                            <li><a href="#"><img src="images4/footer01.png"><br/><span class="two">搜索</span></a></li>
+                            <li><a href="#"><img src="images4/footer02.png"><br/><span class="two">收藏</span></a></li>
+                            <li><a href="#"><img src="images4/footer03.png"><br/><span class="one">历史</span></a></li>
+                            <li><a href="#"><img src="images4/footer04.png"><br/><span class="two">我</span></a></li>
+                     </ul>
+              </div>
+       </div>
+</body>
+</html>

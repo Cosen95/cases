@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/angular-1.5.8.min.js"></script>
+</head>
+<body ng-controller="myCon">
+    <table class="table table-bordered text-center table-hover">
+        <tr>
+            <td>书籍编号</td>
+            <td>书籍名字</td>
+            <td>书籍价格</td>
+            <td>书籍数量</td>
+            <td>总价</td>
+        </tr>
+        <tr ng-repeat="book in books track by $index">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.num}}</td>
+            <td>{{book.price * book.num}}</td>
+        </tr>
+    </table>
+</body>
+<script>
+    angular.module("myApp",[])
+        .controller("myCon",["$scope",function($s){
+            var data = [
+                {
+                    id:100,
+                    name:"wolf",
+                    price:66,
+                    num:200,
+                }
+            ]
+            $s.books = data;
+        }])
+</script>
+</html>

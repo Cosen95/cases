@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+.pro_detail_right { 
+	width:380px;  
+	float:left; 
+	margin:10px;
+}
+
+.pro_detail_right .color_change { 
+	width:380px;
+	font-weight:bold;
+	float:left; 
+	display:inline;
+	margin-bottom:10px; 
+}
+.pro_detail_right .color_change ul li { 
+	float:left; 
+	margin-right:10px; 
+}
+.pro_detail_right .color_change img { 
+	width:30px; 
+	height:30px; 
+	padding:1px; 
+	background:#EEE;
+	border:1px solid #BBB;cursor:pointer; 
+}
+.pro_detail_right .color_change img:hover { 
+	padding:1px; 
+	background:#999; 
+}
+.pro_detail_right .pro_size {
+	width:380px;
+	font-weight:bold;
+	float:left; 
+	display:inline;
+	margin-bottom:10px; 
+}
+.pro_detail_right .pro_size ul li{
+	float:left; 
+	margin-right:5px; 
+}
+.pro_detail_right .pro_size ul li span{ 
+	display:block; 
+	margin-right:6px; 
+	padding:1px 12px; 
+	border:1px solid #AAA;
+	cursor:pointer; 
+}
+.pro_detail_right .pro_size ul li span:hover {
+	background:#CCC; 
+}
+.pro_detail_right .pro_num { 
+	width:380px;
+	font-weight:bold;
+	float:left; 
+	display:inline;
+	margin-bottom:10px; 
+}
+.pro_detail_right .pro_price { 
+	width:380px;
+	font-weight:bold;
+	float:left; 
+	display:inline;
+	margin-bottom:10px; 
+}
+.pro_detail_right .pro_rating { 
+	width:380px;
+	font-weight:bold;
+	float:left; 
+	display:inline;
+	margin-bottom:10px; 
+}
+/* 评分css */
+.rating{
+	width:80px;
+	height:16px;
+	margin:0 0 20px 0;
+	padding:0;
+	list-style:none;
+	clear:both;
+	position:relative;
+	background: url(../pro_img/star-matrix.gif) no-repeat 0 0;
+}
+.nostar {background-position:0 0}
+.onestar {background-position:0 -16px}
+.twostar {background-position:0 -32px}
+.threestar {background-position:0 -48px}
+.fourstar {background-position:0 -64px}
+.fivestar {background-position:0 -80px}
+ul.rating li {
+	cursor: pointer;
+	float:left;
+	text-indent:-999em;
+}
+ul.rating li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	z-index: 200;
+}
+ul.rating li.one a {left:0}
+ul.rating li.two a {left:16px;}
+ul.rating li.three a {left:32px;}
+ul.rating li.four a {left:48px;}
+ul.rating li.five a {left:64px;}
+ul.rating li a:hover {
+	z-index:2;
+	width:80px;
+	height:16px;
+	overflow:hidden;
+	left:0;	
+	background: url(../pro_img/star-matrix.gif) no-repeat 0 0
+}
+ul.rating li.one a:hover {background-position:0 -96px;}
+ul.rating li.two a:hover {background-position:0 -112px;}
+ul.rating li.three a:hover {background-position:0 -128px}
+ul.rating li.four a:hover {background-position:0 -144px}
+ul.rating li.five a:hover {background-position:0 -160px}
+

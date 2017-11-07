@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" href="css/media-100.css">
+	<style>
+      *{
+      	margin: 0;
+      	padding: 0;
+      }
+      ul{
+      	list-style: none;
+      }
+      a{
+      	text-decoration: none;
+      }
+      .header{
+       	width: 100%;
+       	height: 0.64rem;
+       	background-color: #f05b1a;
+       }
+       .header .container{
+       	width: 5.56rem;
+       	height: 0.64rem;
+       	line-height: 0.64rem;
+       	margin:0 auto;
+       	text-align: center;
+       	font-size: 0;
+       }
+       .header .container img{
+        margin-top: 0.16rem;
+        width: 0.88rem;
+       }
+       .tab{
+       	width: 100%;
+       	height: 0.736rem;
+       	background-color: #f2733c;
+       }
+       .tab .container{
+       	width: 5.56rem;
+       	height: 0.736rem;
+        padding-top: 0.1rem;
+       	margin: 0 auto;
+       }
+       .tab .container ul{
+
+       	width: 5.56rem;
+       	height: 0.448rem;
+        border:0.016rem solid #fff;
+       	font-size: 0;
+       	border-radius: 0.08rem;
+       }
+       .tab .container li{
+       	float: left;
+       	width: 50%;
+       	height: 100%;
+       	line-height: 0.448rem;
+        border-radius: 0.08rem 0 0 0.08rem;
+       	text-align: center;
+       	font-size:0.224rem;
+       }
+       .tab .container li.now{
+       	background-color: #fff;
+       	border-radius: 0 0.08rem 0.08rem 0;
+       	
+       }
+       .tab .container li.now a{
+       
+       	color: #f05b1a;
+       }
+       .tab .container li a{
+
+       	color: #fff;
+       }
+       .search{
+       	width: 100%;
+       	height: 0.736rem;
+       	background-color: #fff;
+       }
+       .search .container{
+       	width: 5.56rem;
+       	height: 0.736rem;
+       	margin: 0 auto;
+       	font-size: 0;
+       }
+       .search .container input{
+       	margin-top: 0.08rem;
+       	width: 5.56rem;
+       	height: 0.48rem;
+       	border-radius:0.08rem;
+       	background-color: #e5e5e5;
+       	border:none;
+        text-align: center;
+        color:#b6b6b6;
+        background-image: url(images10/search-icon.png);
+        background-repeat: no-repeat;
+        background-position: 2.1rem center ;
+       }
+       .friend{
+       	width: 100%;
+       	height: 1.248rem;
+       	background-color: #fff;
+       }
+       .friend .container{
+       	width: 5.56rem;
+       	height: 1.248rem;
+       	margin: 0 auto;
+       	
+       }
+       .friend .container ul{
+       	width: 5.56rem;
+       	height: 1.248rem;
+       	display: flex;
+       	justify-content:space-between;
+       	align-items:center;
+       	font-size: 0;
+       	text-align: center;
+       }
+       .friend .container img{
+       	width: 0.704rem;
+      
+       
+       }
+       .friend .container p{
+       	color:#737373;
+       	font-size:0.192rem;
+       		
+       }
+       .txt{
+       	width: 100%;
+       	height: 0.4rem;
+       	background-color: #eff0f4;
+       }
+       .txt .container{
+       	width: 5.56rem;
+       	height: 0.4rem;
+       	line-height: 0.4rem;
+       	margin: 0 auto;
+       	font-size: 0;
+       }
+       .txt .container span{
+        color:#737373;
+        font-size:0.192rem;
+       }
+       .talk{
+       	width: 100%;
+       	height: 6.4rem;
+       	background-color: #fff;
+       }
+       .talk .container{
+       	width: 5.56rem;
+       	height: 6.4rem;
+       	margin: 0 auto;
+       	font-size: 0;
+       }
+       .talk .container table{
+       	width: 5.56rem;
+       	height: 6.4rem;
+       }
+       .talk .container table tr{
+       	display: block;
+       	border-bottom:0.008rem solid #999;
+       }
+       .talk .container table span.one{
+       	display: block;
+       	width: 1.52rem;
+       	height:0.32rem;
+       	font-size: 0.224rem;
+       	color: #303030;
+       	margin-left: 0.08rem;
+       }
+       .talk .container table span.two{
+       	display: block;
+       	width: 1.584rem;
+       	height:0.288rem;
+       	font-size: 0.192rem;
+       	color: #585858;
+       	margin-left: 0.08rem;
+       }
+       .talk .container table span.three{
+       	display: block;
+       	width: 4.17rem;
+       	height:0.56rem;
+       	font-size: 0.192rem;
+       	color: #9f9f9f;
+       	margin-left: 0.08rem;
+       }
+       .talk .container table td:nth-child(1){
+       	width: 0.736rem;
+        height: 1.28rem;
+       }
+       .talk .container table td:nth-child(1) img{
+        width: 0.704rem;
+       }
+       .talk .container table td:nth-child(2){
+       	width: 4.176rem;
+       	height: 1.28rem;
+       }
+       .talk .container table td:nth-child(3){
+       	width: 0.648rem;
+       	height: 1.28rem;
+
+       }
+       .talk .container table td:nth-child(3) img{
+        width: 0.48rem;
+       }
+       .footer{
+       	position: fixed;
+        
+       	left: 0;
+       	bottom:0;
+       	width: 100%;
+       	height: 0.784rem;
+       	background-color: #fff;
+       	border-top: 0.024rem solid #e4e2e1;
+       }
+       .footer .container{
+       	width: 5.52rem;
+       	height: 0.784rem;
+       	margin: 0 auto;
+       	padding-top: 0.16rem;
+       }
+       .footer .container ul{
+        width: 5.52rem;
+       	height: 0.784rem;
+       	text-align: center;
+        font-size: 0;
+       }
+       .footer .container ul li{
+       	float: left;
+       	width: 25%;
+       	height: 0.784rem;
+       }
+
+       .footer .container span{
+       	width :0.736rem;
+       	height: 0.32rem;
+       	font-size: 0.128rem;
+       }
+       .footer .container span.one{
+       	color: #f16528;
+       
+       }
+       .footer .container span.two{
+       	color: #9f9f9f;
+       
+       }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<img src="images9/wenzi01.png">
+		</div>
+	</div>
+	<div class="tab">
+		<div class="container">
+			<ul>
+				<li><a href="#">兴趣</a></li>
+				<li class="now"><a href="#">建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="search">
+		<div class="container">
+		    <input type="text" value="搜索">
+		</div>
+	</div>
+	<div class="friend">
+		<div class="container">
+		   <ul>
+			 <li><img src="images10/pic01.png"><p>微信好友</p></li>
+			 <li><img src="images10/pic02.png"><p>微信朋友圈</p></li>
+			 <li><img src="images10/pic03.png"><p>新浪微博</p></li>
+			 <li><img src="images10/pic04.png"><p>QQ好友</p></li>
+		   </ul>
+		</div>
+	</div>
+	<div class="txt">
+		<div class="container">
+			<span>建议</span>
+		</div>
+	</div>
+	<div class="talk">
+		<div class="container">
+			<table cellspacing="0">
+				<tr>
+					<td><img src="images10/talk01.png"></td>
+					<td>
+					<span class="one">风景</span>
+					<span class="two">上海 浦东新区</span>
+					<span class="three">改善生活，建议晚饭后散步</span></td>
+					<td><img src="images10/look.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images10/talk02.png"></td>
+					<td>
+					<span class="one">风景</span>
+					<span class="two">上海 浦东新区</span>
+					<span class="three">改善生活，建议晚饭后散步</span></td>
+					<td><img src="images10/look.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images10/talk03.png"></td>
+					<td>
+					<span class="one">风景</span>
+					<span class="two">上海 浦东新区</span>
+					<span class="three">改善生活，建议晚饭后散步</span></td>
+					<td><img src="images10/look.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images10/talk04.png"></td>
+					<td>
+					<span class="one">风景</span>
+					<span class="two">上海 浦东新区</span>
+					<span class="three">改善生活，建议晚饭后散步</span></td>
+					<td><img src="images10/look.png"></td>
+				</tr>
+				<tr>
+					<td><img src="images10/talk05.png"></td>
+					<td>
+				    <span class="one">风景</span>
+					<span class="two">上海 浦东新区</span>
+					<span class="three">改善生活，建议晚饭后散步</span></td>
+					<td><img src="images10/look.png"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="#"><img src="images10/footer01.png"><br/><span class="two">搜索</span></a></li>
+				<li><a href="#"><img src="images10/footer02.png"><br/><span class="two">收藏</span></a></li>
+				<li><a href="#"><img src="images10/footer03.png"><br/><span class="two">历史</span></a></li>
+				<li><a href="#"><img src="images10/footer04.png"><br/><span class="one">我</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
